@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b5de6c7-4891-42aa-9ee1-4dde21353397" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/button.css" afterPath="$PROJECT_DIR$/web/css/button.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/list.css" afterPath="$PROJECT_DIR$/web/css/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/registration.jsp" afterPath="$PROJECT_DIR$/web/jsp/registration.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="finaltask.iws" />
@@ -941,19 +926,24 @@
       <workItem from="1438751837530" duration="3692000" />
       <workItem from="1438756202421" duration="1581000" />
       <workItem from="1438758265017" duration="1282000" />
-      <workItem from="1438790672370" duration="16403000" />
+      <workItem from="1438790672370" duration="16503000" />
     </task>
+    <task id="LOCAL-00001" summary="05,08,2015">
+      <created>1438810340823</created>
+      <updated>1438810340823</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141583000" />
+    <option name="totallyTimeSpent" value="141683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.86090773" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -963,7 +953,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36638656" sideWeight="0.838438" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.13909224" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26590538" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -995,6 +985,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="05,08,2015" />
+    <option name="LAST_COMMIT_MESSAGE" value="05,08,2015" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
