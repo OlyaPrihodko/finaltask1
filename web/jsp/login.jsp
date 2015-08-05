@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=utf-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
@@ -8,14 +8,32 @@
 <fmt:message bundle="${loc}" key="locale.message.Password" var="Password"/>
 <fmt:message bundle="${loc}" key="locale.message.Enter" var="Enter"/>
 <fmt:message bundle="${loc}" key="locale.message.Signup" var="Signup"/>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="${language}">
 <head>
     <title>Log in</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <link rel="stylesheet" href="css/button.css" type="text/css" />
     <link rel="stylesheet" href="css/list.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 
+    <script type="text/javascript">
+        <!--
+      function check(){
+            f_login=document.inputform.login.value.toString();
+            if (f_login==''){
+                document.inputform.login.focus();
+                document.inputform.login.required="required";
+                return false;
+             }
+            f_password=document.inputform.password.value.toString();
+            if (f_password==''){
+                document.inputform.password.focus();
+                document.inputform.password.required="required";
+                return false;
+            }
+        } //-->
+    </script>
 </head>
 <body>
 <form>
@@ -27,25 +45,26 @@
     </div>
 </form>
 
-<form action="controller" method="post">
-    <input type="hidden" id="command" name="command" value=""/>
+<form action="controller" method="post" name="inputform" onsubmit="return check();">
+    <input type="hidden" name="command" value="login"/>
     <table class="simple_table" >
         <tr>
-            <td>${Login}</td>
-            <td><input type="text" name="login" value=""></td>
+            <td >${Login}</td>
+            <td><input type="text" name="login" value="" required =""></td>
         </tr>
         <tr>
-            <td>${Password}</td>
-            <td><input type="password" name="password"  value=""></td>
+            <td >${Password}</td>
+            <td><input type="password" name="password"  value="" required=""></td>
         </tr>
     </table>
     <br/>
-    <input class="button" type="submit" onclick="document.getElementById('command').value='login';" value="${Enter}">
-    <br/>
-  <%--  <input class="button" type="submit" onclick=" <c:set var="toregistr" value="1"/>" value="${Signup}">
-    <c:if test="${toregistr==1}"><jsp:forward page="/jsp/registration.jsp"/></c:if>
---%>
+    <input name="enter" class="button" type="submit"  value="${Enter}" >
+
 </form>
-<a href="jsp/registration.jsp">${Signup}</a>
+<form action="controller" method="post">
+    <input type="hidden" name="command" value="go-to-registr-page"/>
+    <input class="button" type="submit" value="${Signup}">
+</form>
+<%-- <a href="jsp/registration.jsp">${Signup}</a>--%>
 </body>
 </html>

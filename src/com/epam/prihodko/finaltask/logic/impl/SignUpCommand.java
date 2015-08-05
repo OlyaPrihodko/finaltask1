@@ -24,16 +24,16 @@ public class SignUpCommand implements ICommand {
         String surname = request.getParameter(RequestParameterName.PARAM_NAME_SURNAME);
         String email = request.getParameter(RequestParameterName.PARAM_NAME_EMAIL);
         String phone = request.getParameter(RequestParameterName.PARAM_NAME_PHONE);
+        String login = request.getParameter(RequestParameterName.PARAM_NAME_LOGIN);
         String password = request.getParameter(RequestParameterName.PARAM_NAME_PASSWORD);
 
-        Account account = new Account(email,password);
+        Account account = new Account(login,password);
         Person person = new Person(name,surname,email,phone);
         try{
             accountDao.create(account);
             person.setAccountId(accountDao.getId(account));
             personDao.create(person);
             request.setAttribute("user", name);
-
         }catch (DaoException e){
             throw new ProjectException("problem with dao",e);
          }

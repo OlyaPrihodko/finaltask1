@@ -97,7 +97,7 @@ public class MySQLAccountDao implements AccountDao{
         try{
             connection =  Controller.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
-           ResultSet resultSet = preparedStatement.executeQuery();
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                  id = resultSet.getInt("id");
             }

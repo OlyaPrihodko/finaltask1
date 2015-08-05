@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b5de6c7-4891-42aa-9ee1-4dde21353397" name="Default" comment="" />
+    <list default="true" id="0b5de6c7-4891-42aa-9ee1-4dde21353397" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/button.css" afterPath="$PROJECT_DIR$/web/css/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/list.css" afterPath="$PROJECT_DIR$/web/css/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/registration.jsp" afterPath="$PROJECT_DIR$/web/jsp/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="finaltask.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,77 +84,46 @@
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="952">
+            <state line="19" column="4" selection-start="1228" selection-end="1840" vertical-scroll-proportion="-5.3076925" vertical-offset="185" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userPage.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPage.jsp">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="374">
+            <state line="17" column="16" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="340">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personalArea.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/userPages/personalArea.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/jsp/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="66" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1071">
+            <state line="21" column="0" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.3119777" vertical-offset="245" max-vertical-offset="1360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mydb.person" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQL - mydb@localhost" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/">
+      <file leaf-file-name="CommandHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="16" selection-start="210" selection-end="226" vertical-scroll-proportion="-1.7586207" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLPersonDao.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.4068768" vertical-offset="130" max-vertical-offset="850">
+            <state line="19" column="24" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="578">
               <folding>
-                <element signature="method#getById#0;class#MySQLPersonDao#0" expanded="false" />
-                <marker date="1438699334550" expanded="true" signature="907:985" placeholder="insert into ..." />
+                <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="49" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="969">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,12 +135,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LogoutCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/DAOFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/MySQLDAOFactory.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/DBResourceManager.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ProjectException.java" />
@@ -168,8 +154,6 @@
         <option value="$PROJECT_DIR$/web/ex.jsp" />
         <option value="$PROJECT_DIR$/web/css/ex.css" />
         <option value="$PROJECT_DIR$/web/css/list.jsp" />
-        <option value="$PROJECT_DIR$/web/css/button.css" />
-        <option value="$PROJECT_DIR$/web/css/list.css" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java" />
@@ -178,31 +162,36 @@
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/ToRegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account" />
         <option value="$PROJECT_DIR$/web/jsp/userPage.jsp" />
-        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Person.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
-        <option value="$PROJECT_DIR$/web/jsp/registration.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/userPages/123.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/web/jsp/main.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java" />
+        <option value="$PROJECT_DIR$/web/css/list.css" />
+        <option value="$PROJECT_DIR$/web/css/button.css" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToPreviousPageCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToRegistrPageCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/web/jsp/error.jsp" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/web/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/web/jsp/registration.jsp" />
       </list>
     </option>
   </component>
@@ -226,10 +215,11 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1364" />
-    <option name="height" value="726" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -257,6 +247,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -578,7 +569,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -821,12 +811,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -844,6 +828,12 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 8.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.12" ALTERNATIVE_JRE_ENABLED="false">
@@ -944,31 +934,36 @@
       <workItem from="1438503723577" duration="5894000" />
       <workItem from="1438512014748" duration="2773000" />
       <workItem from="1438518169648" duration="11921000" />
-      <workItem from="1438670233906" duration="21025000" />
+      <workItem from="1438670233906" duration="21426000" />
+      <workItem from="1438700285814" duration="2735000" />
+      <workItem from="1438704927221" duration="3734000" />
+      <workItem from="1438714036909" duration="528000" />
+      <workItem from="1438751837530" duration="3692000" />
+      <workItem from="1438756202421" duration="1581000" />
+      <workItem from="1438758265017" duration="1282000" />
+      <workItem from="1438790672370" duration="16403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111227000" />
+    <option name="totallyTimeSpent" value="141583000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1364" height="726" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41512606" sideWeight="0.838438" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30168453" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.042459738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36638656" sideWeight="0.838438" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30252102" sideWeight="0.16156203" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26590538" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -978,11 +973,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21822359" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30252102" sideWeight="0.838438" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1727672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2798742" sideWeight="0.8938507" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41512606" sideWeight="0.838438" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1007,36 +1004,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..order">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.epam.prihodko.finaltask.dao.impl.MySQLOrderDao">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.epam.prihodko.finaltask.dao.impl.MySQLOrderDao</OriginalElement>
-          <nodes>
-            <node x="" y="">com.epam.prihodko.finaltask.dao.domain.OrderDao</node>
-            <node x="" y="">com.epam.prihodko.finaltask.dao.GenericDao</node>
-            <node x="" y="">com.epam.prihodko.finaltask.dao.impl.MySQLOrderDao</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="19.0" y="83.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LogoutCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
@@ -1094,42 +1061,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/adminPages/mainAdminPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0" vertical-offset="553" max-vertical-offset="867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="158" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
+        <state line="9" column="1" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
+        <state line="11" column="34" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding>
-            <element signature="method#getById#0;class#MySQLOrderDao#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="44" column="34" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java">
@@ -1153,62 +1100,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="26" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.857143" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="491" selection-end="491" vertical-scroll-proportion="0.35602096" vertical-offset="0" max-vertical-offset="382">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties">
-      <provider editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="242" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finaltask.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="11" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
@@ -1218,110 +1112,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="52" selection-start="1344" selection-end="1380" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.09770115" vertical-offset="0" max-vertical-offset="348">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="5" selection-start="3737" selection-end="3737" vertical-scroll-proportion="0.13395639" vertical-offset="467" max-vertical-offset="1139">
-          <folding>
-            <element signature="method#checkAccount#0;class#MySQLAccountDao#0" expanded="false" />
-            <element signature="method#getById#0;class#MySQLAccountDao#0" expanded="false" />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
-            <marker date="1438696285055" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="909" selection-end="909" vertical-scroll-proportion="1.2346369" vertical-offset="0" max-vertical-offset="731">
-          <folding>
-            <element signature="method#setAccountId#0;class#Person#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="825" selection-end="825" vertical-scroll-proportion="0.84367245" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="61" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.40625" vertical-offset="137" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="36" column="0" selection-start="909" selection-end="909" vertical-scroll-proportion="1.2346369" vertical-offset="0" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="463" selection-end="463" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="550" selection-end="550" vertical-scroll-proportion="0.34772727" vertical-offset="0" max-vertical-offset="440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb</OriginalElement>
-          <nodes>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.person</node>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.account</node>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.order</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="194.5" y="159.5" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
+        <state line="12" column="22" selection-start="463" selection-end="463" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
@@ -1338,58 +1136,220 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/personalArea.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="16" selection-start="210" selection-end="226" vertical-scroll-proportion="-1.7586207" vertical-offset="0" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb</OriginalElement>
+          <nodes>
+            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.person</node>
+            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.account</node>
+            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.order</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="195.0" y="160.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="374">
+        <state line="15" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="-7.8461537" vertical-offset="51" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="23" selection-start="966" selection-end="966" vertical-scroll-proportion="0.19651741" vertical-offset="431" max-vertical-offset="833" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="85" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.071429" vertical-offset="0" max-vertical-offset="272" />
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.45169082" vertical-offset="0" max-vertical-offset="414" />
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.42394015" vertical-offset="0" max-vertical-offset="401" />
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToRegistrPageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="8" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="457" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="114" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="57" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1539" selection-end="2745" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="697">
+          <folding>
+            <element signature="method#checkAccount#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#getById#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#getId#0;class#MySQLAccountDao#0" expanded="false" />
+            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
+            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
+            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="14" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="595">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="43" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="49" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="24" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="578">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="2" selection-start="3710" selection-end="3710" vertical-scroll-proportion="0.35774648" vertical-offset="2151" max-vertical-offset="20723">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="952">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/personalArea.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
+        <state line="19" column="4" selection-start="1228" selection-end="1840" vertical-scroll-proportion="-5.3076925" vertical-offset="185" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="66" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1071">
+        <state line="21" column="0" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.3119777" vertical-offset="245" max-vertical-offset="1360">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="210" selection-end="226" vertical-scroll-proportion="-1.7586207" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.4068768" vertical-offset="130" max-vertical-offset="850">
-          <folding>
-            <element signature="method#getById#0;class#MySQLPersonDao#0" expanded="false" />
-            <marker date="1438699334550" expanded="true" signature="907:985" placeholder="insert into ..." />
-          </folding>
         </state>
       </provider>
     </entry>

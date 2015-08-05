@@ -5,17 +5,18 @@
     -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
     -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;
     box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;
-
+    color: #ffc000;
 }
 
 body{
-    font:14px "Times New Roman", Times, serif;
-    color:#ffc000;
+    font:16px "Times New Roman", Times, serif;
+
     background-color: #ac913c;
     font-weight:bold;
 }
-.link{
-    font:14px "Times New Roman", Times, serif;
-    color:#ffc000;
-    font-weight:bold;
+h1,h2{
+    color:black;
+}
+input:required:focus{
+    background-color: lightpink;
 }
