@@ -8,6 +8,9 @@ import java.util.List;
 public interface GenericDao <T>{
     public T getById(int domainId) throws DaoException;
     public void create(T domain)  throws DaoException;
+    public void update (T domain) throws DaoException;
+    public void delete (T domain) throws DaoException;
+
    /* public T create ();
     public T persist(T domain);
     public void update (T domain);

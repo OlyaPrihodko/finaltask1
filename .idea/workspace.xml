@@ -2,6 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b5de6c7-4891-42aa-9ee1-4dde21353397" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\Оля\IdeaProjects\finaltask\web\jsp\userPages\personalArea.jsp" afterPath="$PROJECT_DIR$/web/jsp/userPages/userPersonalArea.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/DAOFactory.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/DAOFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LogoutCommand.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LogoutCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/MySQLDAOFactory.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/MySQLDAOFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/button.css" afterPath="$PROJECT_DIR$/web/css/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" afterPath="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/login.jsp" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/main.jsp" afterPath="$PROJECT_DIR$/web/jsp/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/adminPages/mainAdminPage.jsp" afterPath="$PROJECT_DIR$/web/jsp/adminPages/mainAdminPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/registration.jsp" afterPath="$PROJECT_DIR$/web/jsp/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="finaltask.iws" />
@@ -57,6 +91,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -66,19 +101,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/jsp/login.jsp">
+      <file leaf-file-name="LoginCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="1228" selection-end="1840" vertical-scroll-proportion="-5.3076925" vertical-offset="185" max-vertical-offset="1275">
+            <state line="25" column="13" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <file leaf-file-name="Order.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="459">
+            <state line="66" column="87" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="412" max-vertical-offset="799">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdatePersonCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/UpdatePersonCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -87,27 +131,16 @@
       <file leaf-file-name="registration.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/jsp/registration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.83928573" vertical-offset="245" max-vertical-offset="1360">
+            <state line="159" column="0" selection-start="6225" selection-end="6225" vertical-scroll-proportion="5.8194447" vertical-offset="2284" max-vertical-offset="2805">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java">
+      <file leaf-file-name="userPersonalData.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPersonalData.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="24" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="578">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="49" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="969">
+            <state line="25" column="78" selection-start="1686" selection-end="1693" vertical-scroll-proportion="14.346154" vertical-offset="798" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -126,57 +159,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/DBResourceManager.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/ConnectionPool.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ProjectException.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ConnectionPoolException.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/DaoException.java" />
-        <option value="$PROJECT_DIR$/web/css/buttom.css" />
-        <option value="$PROJECT_DIR$/web/jsp/userPages/mainUserPagee.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/adminPages/mainAdminPage.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/userPages/mainUserPage.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/userPages/personalArea.jsp" />
-        <option value="$PROJECT_DIR$/web/ex.jsp" />
-        <option value="$PROJECT_DIR$/web/css/ex.css" />
-        <option value="$PROJECT_DIR$/web/css/list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/ToRegisterCommand.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/jsp/userPage.jsp" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Person.java" />
-        <option value="$PROJECT_DIR$/web/jsp/userPages/123.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java" />
-        <option value="$PROJECT_DIR$/web/css/list.css" />
-        <option value="$PROJECT_DIR$/web/css/button.css" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToPageCommand.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToPreviousPageCommand.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToRegistrPageCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/web/jsp/error.jsp" />
-        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Apartment.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/ApartmentClass.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Price.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Status.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/Status.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/ApartmentClassDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/ApartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/CheckDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/StatusDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLApartmentDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLApartmentClassDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/MySQLDAOFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/DAOFactory.java" />
+        <option value="$PROJECT_DIR$/web/jsp/login.jsp" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..apartment_class" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..apartment" />
+        <option value="db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/" />
+        <option value="$PROJECT_DIR$/web/jsp/makeAnOrder.jsp" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java" />
         <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account" />
         <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/web/jsp/registration.jsp" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..order" />
+        <option value="dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/CustomTagException.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/tld/allList.tld" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/SetBean.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/ResponseParameterName.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/tld/taglib.tld" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/customTags/AllListTag.java" />
+        <option value="$PROJECT_DIR$/web/jsp/userPages/userPersonalArea.jsp" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/MakeAnOrderCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/UpdatePersonCommand.java" />
       </list>
     </option>
   </component>
@@ -203,6 +236,43 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
+          </State>
+          <State>
+            <id>Java EE issues</id>
+          </State>
+          <State>
+            <id>Javadoc issues</id>
+          </State>
+          <State>
+            <id>TestNG</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>WebProperties</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -232,6 +302,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -262,24 +333,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,7 +390,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adminPages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -352,208 +409,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="localization" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resource Bundle 'locale'" />
-              <option name="myItemType" value="com.intellij.lang.properties.projectView.ResourceBundleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="finaltask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -566,8 +426,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/bootstrap-2.3.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -583,10 +443,11 @@
       <recent name="com.epam.prihodko.finaltask.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Оля\IdeaProjects\finaltask\web" />
+      <recent name="C:\Users\Оля\IdeaProjects\finaltask\web\js" />
+      <recent name="C:\Users\Оля\IdeaProjects\finaltask\web\css" />
       <recent name="C:\Users\Оля\IdeaProjects\finaltask\src\com\epam\prihodko\finaltask\dao\connection" />
       <recent name="C:\Users\Оля\IdeaProjects\finaltask\web\jsp" />
-      <recent name="C:\Users\Оля\IdeaProjects\finaltask\src\com\epam\prihodko\finaltask\localization" />
-      <recent name="C:\Users\Оля\IdeaProjects\finaltask\web\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Оля\IdeaProjects\finaltask\web\jsp\userPages" />
@@ -796,6 +657,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -813,12 +680,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 8.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.12" ALTERNATIVE_JRE_ENABLED="false">
@@ -926,7 +787,28 @@
       <workItem from="1438751837530" duration="3692000" />
       <workItem from="1438756202421" duration="1581000" />
       <workItem from="1438758265017" duration="1282000" />
-      <workItem from="1438790672370" duration="16589000" />
+      <workItem from="1438790672370" duration="25110000" />
+      <workItem from="1438850729202" duration="6041000" />
+      <workItem from="1438860160433" duration="69000" />
+      <workItem from="1438862198494" duration="10913000" />
+      <workItem from="1438894859054" duration="970000" />
+      <workItem from="1438933372362" duration="1727000" />
+      <workItem from="1438957899056" duration="4901000" />
+      <workItem from="1438983063129" duration="394000" />
+      <workItem from="1439017300121" duration="38952000" />
+      <workItem from="1439124747245" duration="20490000" />
+      <workItem from="1439193315955" duration="12790000" />
+      <workItem from="1439216703400" duration="11796000" />
+      <workItem from="1439231991865" duration="2614000" />
+      <workItem from="1439281411026" duration="7570000" />
+      <workItem from="1439312300205" duration="4286000" />
+      <workItem from="1439320623189" duration="4551000" />
+      <workItem from="1439352179533" duration="1905000" />
+      <workItem from="1439363932870" duration="976000" />
+      <workItem from="1439365478824" duration="11166000" />
+      <workItem from="1439378516594" duration="2271000" />
+      <workItem from="1439381022210" duration="1424000" />
+      <workItem from="1439385206702" duration="23746000" />
     </task>
     <task id="LOCAL-00001" summary="05,08,2015">
       <created>1438810340823</created>
@@ -944,44 +826,68 @@
       <created>1438810468838</created>
       <updated>1438810468838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="05,08,2015&#10;">
+      <created>1438810481783</created>
+      <updated>1438810481783</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141769000" />
+    <option name="totallyTimeSpent" value="319842000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34094617" sideWeight="0.86027193" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7324633" sideWeight="0.84063447" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.043806646" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.8655589" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13670695" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36638656" sideWeight="0.838438" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14681892" sideWeight="0.8383686" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.46341464" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34094617" sideWeight="0.1389728" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4045677" sideWeight="0.15936556" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26590538" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26590538" sideWeight="0.84063447" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21903323" sideWeight="0.16058394" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4063444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2798742" sideWeight="0.8938507" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32930514" sideWeight="0.5365854" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.84063447" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41512606" sideWeight="0.838438" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41435564" sideWeight="0.47356495" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1009,351 +915,379 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LogoutCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/ApartmentClassDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
+        <state line="12" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.41046277" vertical-offset="0" max-vertical-offset="497" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/CheckDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="57" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
+        <state line="10" column="55" selection-start="382" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/DBParameter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/StatusDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289" />
+        <state line="10" column="37" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/DBResourceManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLApartmentClassDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="85" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ProjectException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/DaoException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ConnectionPoolException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="5" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/connection/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="5" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="544" />
+        <state line="44" column="0" selection-start="1852" selection-end="1852" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/DAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="493" />
+        <state line="18" column="6" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/factory/MySQLDAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="36" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="425" />
+        <state line="20" column="5" selection-start="674" selection-end="674" vertical-scroll-proportion="0.38900635" vertical-offset="71" max-vertical-offset="646" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/ICommand.java">
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="115702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/adminPages/mainAdminPage.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="1" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..apartment">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..apartment_class">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLApartmentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+        <state line="45" column="1" selection-start="1907" selection-end="1907" vertical-scroll-proportion="1.7947214" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Check.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/ApartmentDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
+        <state line="8" column="42" selection-start="362" selection-end="381" vertical-scroll-proportion="0.2881356" vertical-offset="0" max-vertical-offset="354" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Apartment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="313" selection-end="313" vertical-scroll-proportion="0.356974" vertical-offset="19" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finaltask.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="909" selection-end="909" vertical-scroll-proportion="1.2346369" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="463" selection-end="463" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="309" selection-end="309" vertical-scroll-proportion="0.27055702" vertical-offset="0" max-vertical-offset="377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/personalArea.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+        <state line="2" column="54" selection-start="68" selection-end="99" vertical-scroll-proportion="0.087878786" vertical-offset="5" max-vertical-offset="561">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://db-console:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="210" selection-end="226" vertical-scroll-proportion="-1.7586207" vertical-offset="0" max-vertical-offset="153" />
+        <state line="5" column="62" selection-start="327" selection-end="327" vertical-scroll-proportion="0.28239202" vertical-offset="0" max-vertical-offset="301" />
       </provider>
     </entry>
-    <entry file="uml://DATABASE/cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>cd63ffcb-2322-4ba9-abaa-bb472592ce4a.schema:mydb</OriginalElement>
-          <nodes>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.person</node>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.account</node>
-            <node x="" y="">cd63ffcb-2322-4ba9-abaa-bb472592ce4a.table:mydb.order</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="195.0" y="160.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java">
+    <entry file="file://$PROJECT_DIR$/web/jsp/makeAnOrder.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="570" selection-end="570" vertical-scroll-proportion="-7.8461537" vertical-offset="51" max-vertical-offset="374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="11" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="23" selection-start="966" selection-end="966" vertical-scroll-proportion="0.19651741" vertical-offset="431" max-vertical-offset="833" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_en_EN.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="85" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.071429" vertical-offset="0" max-vertical-offset="272" />
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.45169082" vertical-offset="0" max-vertical-offset="414" />
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/localization/locale_ru_RU.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="773" selection-end="773" vertical-scroll-proportion="0.42394015" vertical-offset="0" max-vertical-offset="401" />
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToRegistrPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="8" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="457" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="114" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="57" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1539" selection-end="2745" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="697">
-          <folding>
-            <element signature="method#checkAccount#0;class#MySQLAccountDao#0" expanded="false" />
-            <element signature="method#getById#0;class#MySQLAccountDao#0" expanded="false" />
-            <element signature="method#getId#0;class#MySQLAccountDao#0" expanded="false" />
-            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
-            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
-            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1438753379411" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="595">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="49" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0" vertical-offset="444" max-vertical-offset="969">
+        <state line="36" column="58" selection-start="2089" selection-end="2100" vertical-scroll-proportion="2.8846154" vertical-offset="687" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/CommandHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="578">
+        <state line="34" column="38" selection-start="1243" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="376" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..account">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/GenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="54" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..person">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/ICommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/PasswordHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/SignUpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="29" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/DaoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="5" selection-start="97" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/ConnectionPoolException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="61" selection-start="85" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/exception/CustomTagException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="52" selection-start="158" selection-end="158" vertical-scroll-proportion="0.13246754" vertical-offset="0" max-vertical-offset="385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/GoToPageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="80" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/xhtml1-transitional.dtd">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/JSPPageName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="2" selection-start="3710" selection-end="3710" vertical-scroll-proportion="0.35774648" vertical-offset="2151" max-vertical-offset="20723">
+        <state line="10" column="60" selection-start="544" selection-end="557" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/PersonDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="459">
+        <state line="18" column="0" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="60" selection-start="4030" selection-end="4030" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding>
+            <element signature="method#getById#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#create#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#update#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#checkAccount#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#getId#0;class#MySQLAccountDao#0" expanded="false" />
+            <element signature="method#getRole#0;class#MySQLAccountDao#0" expanded="false" />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="update accou..." />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="select * fro..account..." />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="select id fr..account..." />
+            <marker date="1439402750265" expanded="true" signature="-1:-1" placeholder="select role ..account..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/AccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/domain/OrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="26" selection-start="596" selection-end="596" vertical-scroll-proportion="0.3970276" vertical-offset="0" max-vertical-offset="471">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLPersonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="28" selection-start="5428" selection-end="5436" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="986">
+          <folding>
+            <element signature="method#getById#0;class#MySQLPersonDao#0" expanded="false" />
+            <element signature="method#create#0;class#MySQLPersonDao#0" expanded="false" />
+            <element signature="method#update#0;class#MySQLPersonDao#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/dao/impl/MySQLOrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="23" selection-start="6981" selection-end="6981" vertical-scroll-proportion="0.0" vertical-offset="1684" max-vertical-offset="2703">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1439405038661" expanded="true" signature="-1:-1" placeholder="select * fro..order..." />
+            <marker date="1439405038661" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1439405038661" expanded="true" signature="-1:-1" placeholder="update order..." />
+            <marker date="1439405038661" expanded="true" signature="-1:-1" placeholder="select apart..order..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="5.230769" vertical-offset="136" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="1228" selection-end="1840" vertical-scroll-proportion="-5.3076925" vertical-offset="185" max-vertical-offset="1275">
+        <state line="15" column="6" selection-start="1028" selection-end="1028" vertical-scroll-proportion="20.923077" vertical-offset="799" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/RequestParameterName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="56" selection-end="61" vertical-scroll-proportion="0.072186835" vertical-offset="0" max-vertical-offset="471">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e1117af3/cd63ffcb-2322-4ba9-abaa-bb472592ce4a/mydb..order">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="17" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.0" vertical-offset="783" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1872" selection-end="1872" vertical-scroll-proportion="0.40866873" vertical-offset="446" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/tld/taglib.tld">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/SetBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="32" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="459">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/customTags/AllListTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding>
+            <element signature="method#doStartTag#0;class#AllListTag#0" expanded="false" />
+            <element signature="method#doAfterBody#0;class#AllListTag#0" expanded="false" />
+            <element signature="method#doEndTag#0;class#AllListTag#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/controller/ResponseParameterName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/MakeAnOrderCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="35" selection-start="1799" selection-end="1799" vertical-scroll-proportion="0.7906977" vertical-offset="85" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPersonalArea.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.48850575" vertical-offset="255" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/domain/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="87" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="412" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/prihodko/finaltask/logic/impl/UpdatePersonCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/userPages/userPersonalData.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="78" selection-start="1686" selection-end="1693" vertical-scroll-proportion="14.346154" vertical-offset="798" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/registration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.83928573" vertical-offset="245" max-vertical-offset="1360">
+        <state line="159" column="0" selection-start="6225" selection-end="6225" vertical-scroll-proportion="5.8194447" vertical-offset="2284" max-vertical-offset="2805">
           <folding />
         </state>
       </provider>
@@ -1438,7 +1372,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>log4j-1.2.17</last-edited>
+          <last-edited>bootstrap-2.3.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

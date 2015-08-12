@@ -5,6 +5,10 @@ public class Check implements java.io.Serializable{
     private int price;
     public Check(){}
 
+    public Check(int id, int price) {
+        this.id = id;
+        this.price = price;
+    }
 
     public void setId(int id) {
         this.id = id;

@@ -13,10 +13,15 @@
 <head>
     <title>Log in</title>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-    <link rel="stylesheet" href="css/button.css" type="text/css" />
-    <link rel="stylesheet" href="css/list.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <%--  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    --%>
+      <link rel="stylesheet" href="css/button.css" type="text/css" />
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+      <link rel="stylesheet" href="css/list.css" type="text/css" />
 
+
+  <%-- --%>
     <script type="text/javascript">
         <!--
       function check(){
@@ -36,7 +41,28 @@
     </script>
 </head>
 <body>
+<%--
 <form>
+<div class="container">
+    <div class="row">
+        <div class="btn-group btn-large" >
+            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-language"></i>
+                ${language}
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li onclick="${language == 'ru_RU' ? 'selected' : ''}">Русский</li>
+                <li onclick="${language == 'en_EN' ? 'selected' : ''}">Английский</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</form>
+--%>
+<br/>
+<form>
+    <c:set scope="session" value="/jsp/login.jsp" var="previous-page"/>
     <div align="right"  >
         <select id="language" name="language" onchange="submit()" class="list">
         <option value="en_EN" ${language == 'en_EN' ? 'selected' : ''} class="list">English</option>
@@ -45,26 +71,26 @@
     </div>
 </form>
 
-<form action="controller" method="post" name="inputform" onsubmit="return check();">
+<form action="controller" method="post" name="inputform" onsubmit="return check();"><%-- --%>
     <input type="hidden" name="command" value="login"/>
     <table class="simple_table" >
         <tr>
             <td >${Login}</td>
-            <td><input type="text" name="login" value="" required =""></td>
-        </tr>
+            <td><input type="text" name="login" value="" required ="" placeholder="login"></td>
         <tr>
             <td >${Password}</td>
-            <td><input type="password" name="password"  value="" required=""></td>
+            <td><input type="password" name="password"  value="" required ="" placeholder="password"></td> <%-- required =""></td>--%>
         </tr>
     </table>
     <br/>
     <input name="enter" class="button" type="submit"  value="${Enter}" >
-
 </form>
 <form action="controller" method="post">
     <input type="hidden" name="command" value="go-to-registr-page"/>
     <input class="button" type="submit" value="${Signup}">
 </form>
-<%-- <a href="jsp/registration.jsp">${Signup}</a>--%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

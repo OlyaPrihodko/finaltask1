@@ -1,9 +1,7 @@
 package com.epam.prihodko.finaltask.controller;
 
 import com.epam.prihodko.finaltask.logic.ICommand;
-import com.epam.prihodko.finaltask.logic.impl.LoginCommand;
-import com.epam.prihodko.finaltask.logic.impl.SignUpCommand;
-import com.epam.prihodko.finaltask.logic.impl.GoToRegistrPageCommand;
+import com.epam.prihodko.finaltask.logic.impl.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,15 +14,28 @@ public class CommandHelper {
                 iCommand = new LoginCommand();
                 break;
             case LOGOUT:
+                iCommand = new LogoutCommand();
                 break;
             case SIGNUP:
                 iCommand = new SignUpCommand();
                 break;
+            case UPDATE:
+                iCommand = new UpdatePersonCommand();
+                break;
             case GO_TO_REGISTR_PAGE:
-                iCommand = new GoToRegistrPageCommand();
+                iCommand = new GoToPageCommand();
+                break;
+            case GO_TO_USER_PERSONAL_DATA_PAGE:
+                iCommand = new GoToPageCommand();
+                break;
+            case GO_TO_MAKE_AN_ORDER_PAGE:
+                iCommand = new GoToPageCommand();
+                break;
+            case MAKE_AN_ORDER:
+                iCommand = new MakeAnOrderCommand();
                 break;
             case PREVIOUS_PAGE:
-                iCommand = new GoToRegistrPageCommand();
+                iCommand = new GoToPageCommand();
                 break;
 
         }

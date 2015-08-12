@@ -38,12 +38,14 @@ public class Controller extends HttpServlet {
         processRequest(request, response);
     }
     private void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-        request.setCharacterEncoding("utf-8");
+       // request.setCharacterEncoding("utf-8");
         HttpSession session = request.getSession(true);
         //session.getAttribute();
         String page = null;
         ICommand iCommand = commandHelper.defineCommand(request);
-        try{page = iCommand.execute(request);}
+        try{
+            page = iCommand.execute(request);
+        }
         catch (ProjectException e){
             //e.printStackTrace();
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(JSPPageName.ERROR_PAGE);

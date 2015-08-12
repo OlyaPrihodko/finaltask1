@@ -722,16 +722,40 @@
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="login" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="role" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="person_ibfk_1" table="person" schema="" catalog="mydb" columns="account_id"/>
     </table>
-    <table name="order" schema="" catalog="mydb" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+    <table name="apartment" schema="" catalog="mydb" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="price" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="couchette" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="room_number" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="date_in" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91"/>
-      <column name="date_out" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="class_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="apartment_ibfk_1" columns="class_id" ref-table="apartment_class" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="apartment_class" schema="" catalog="mydb" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="type" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="apartment_ibfk_1" table="apartment" schema="" catalog="mydb" columns="class_id"/>
+    </table>
+    <table name="check" schema="" catalog="mydb" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="price" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="order" schema="" catalog="mydb" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="apartment_class" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="room_number" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="couchette" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="date_in" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="date_out" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="person_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="order_ibfk_1" columns="person_id" ref-table="person" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="person" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -742,6 +766,7 @@
       <column name="phone" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="person_ibfk_1" columns="account_id" ref-table="account" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="order_ibfk_1" table="order" schema="" catalog="mydb" columns="person_id"/>
     </table>
     <table name="columns_priv" schema="" catalog="mysql" type="SYSTEM TABLE">
       <column name="Host" sqlType="CHAR" length="60" precision="0" nullable="false" jdbcType="1" def="Jyc="/>
