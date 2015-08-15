@@ -3,10 +3,18 @@ package com.epam.prihodko.finaltask.logic.impl;
 import com.epam.prihodko.finaltask.controller.CommandName;
 import com.epam.prihodko.finaltask.controller.JSPPageName;
 import com.epam.prihodko.finaltask.controller.RequestParameterName;
+import com.epam.prihodko.finaltask.controller.ResponseParameterName;
+import com.epam.prihodko.finaltask.dao.domain.OrderDao;
+import com.epam.prihodko.finaltask.dao.factory.DAOFactory;
+import com.epam.prihodko.finaltask.domain.MapBean;
+import com.epam.prihodko.finaltask.domain.Order;
+import com.epam.prihodko.finaltask.exception.DaoException;
 import com.epam.prihodko.finaltask.exception.ProjectException;
 import com.epam.prihodko.finaltask.logic.ICommand;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GoToPageCommand implements ICommand{
 
@@ -20,6 +28,26 @@ switch (commandName){
         return JSPPageName.USER_PERSONAL_DATA_PAGE;
     case GO_TO_MAKE_AN_ORDER_PAGE:
         return JSPPageName.MAKE_AN_ORDER_PAGE;
+    case GO_TO_CHANGE_ORDER_PAGE:
+        DAOFactory MySQLDaoFactory =
+                DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
+        OrderDao orderDao = MySQLDaoFactory.getOrderDao();
+        String ord = request.getParameter(ResponseParameterName.ORDER_ID);
+        int orderId = Integer.parseInt(ord);
+        try{
+            Order order = orderDao.getById(orderId);
+            //Map<Integer,Order> mapOrder = new HashMap<Integer, Order>();
+            //mapOrder.put(orderId,order);
+            //MapBean mapBeanOrder = new MapBean(mapOrder);
+            //request.setAttribute(ResponseParameterName.ORDER_ID,orderId);
+            request.getSession().setAttribute(ResponseParameterName.ORDER_ID,orderId);
+            request.getSession().setAttribute(ResponseParameterName.ORDER,order);
+        }catch (DaoException e){
+            throw new ProjectException("problem with dao",e);
+        }
+
+
+        return JSPPageName.CHANGE_ORDER_PAGE;
     case PREVIOUS_PAGE:
         String str = (String)request.getSession().getAttribute("previous-page");
         if(str.equals(JSPPageName.LOGIN_PAGE)){
@@ -27,6 +55,12 @@ switch (commandName){
         }
         if(str.equals(JSPPageName.REGISTR_PAGE)){
             return JSPPageName.REGISTR_PAGE;
+        }
+        if(str.equals(JSPPageName.USER_PERSONAL_AREA_PAGE)){
+            return JSPPageName.USER_PERSONAL_AREA_PAGE;
+        }
+        if(str.equals(JSPPageName.USER_PERSONAL_DATA_PAGE)){
+            return JSPPageName.USER_PERSONAL_DATA_PAGE;
         }
 
 

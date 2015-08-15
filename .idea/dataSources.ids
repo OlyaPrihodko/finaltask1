@@ -742,9 +742,11 @@
       <exported-key name="apartment_ibfk_1" table="apartment" schema="" catalog="mydb" columns="class_id"/>
     </table>
     <table name="check" schema="" catalog="mydb" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="price" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="apartment_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="order_ibfk_3" table="order" schema="" catalog="mydb" columns="check_id"/>
     </table>
     <table name="order" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -753,9 +755,12 @@
       <column name="couchette" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="date_in" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
       <column name="date_out" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
       <column name="person_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="check_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="order_ibfk_1" columns="person_id" ref-table="person" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="order_ibfk_3" columns="check_id" ref-table="check" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="person" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

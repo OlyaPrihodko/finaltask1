@@ -37,8 +37,9 @@ public class SignUpCommand implements ICommand {
             accountDao.create(account);
             person.setAccountId(accountDao.getId(account));
             personDao.create(person);
-            request.setAttribute("user", name);
-            page = JSPPageName.USER_PAGE;
+            //request.setAttribute("user", name);
+            page = JSPPageName.USER_PERSONAL_AREA_PAGE;
+            //page = JSPPageName.USER_PAGE;
         }catch (DaoException e){
             throw new ProjectException("problem with dao",e);
 

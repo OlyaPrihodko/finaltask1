@@ -1,6 +1,8 @@
 package com.epam.prihodko.finaltask.logic.impl;
 
 import com.epam.prihodko.finaltask.controller.JSPPageName;
+import com.epam.prihodko.finaltask.controller.RequestParameterName;
+import com.epam.prihodko.finaltask.controller.ResponseParameterName;
 import com.epam.prihodko.finaltask.dao.domain.PersonDao;
 import com.epam.prihodko.finaltask.dao.factory.DAOFactory;
 import com.epam.prihodko.finaltask.domain.Person;
@@ -17,11 +19,12 @@ public class UpdatePersonCommand implements ICommand {
         DAOFactory MySQLDaoFactory =
                 DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
         PersonDao personDao = MySQLDaoFactory.getPersonDao();
-        Person person = (Person)request.getSession().getAttribute("user");
-        person.setName(request.getParameter("name"));
-        person.setSurname(request.getParameter("surname"));
-        person.setEmail(request.getParameter("email"));
-        person.setPhone(request.getParameter("phone"));
+        Person person = (Person)request.getSession().getAttribute(ResponseParameterName.USER);
+
+        person.setName(request.getParameter(RequestParameterName.PARAM_NAME_NAME));
+        person.setSurname(request.getParameter(RequestParameterName.PARAM_NAME_SURNAME));
+        person.setEmail(request.getParameter(RequestParameterName.PARAM_NAME_EMAIL));
+        person.setPhone(request.getParameter(RequestParameterName.PARAM_NAME_PHONE));
         try{
             personDao.update(person);
             //как-то само обновляется и запизивается в сессию

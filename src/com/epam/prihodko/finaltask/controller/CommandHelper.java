@@ -37,6 +37,15 @@ public class CommandHelper {
             case PREVIOUS_PAGE:
                 iCommand = new GoToPageCommand();
                 break;
+            case GO_TO_CHANGE_ORDER_PAGE:
+                iCommand = new GoToPageCommand();
+                break;
+            case UPDATE_ORDER:
+                iCommand = new UpdateOrderCommand();
+                break;
+            case REMOVE_ORDER:
+                iCommand = new DeleteOrderCommand();
+                break;
 
         }
         return iCommand;

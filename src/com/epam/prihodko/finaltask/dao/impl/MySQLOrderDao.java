@@ -8,16 +8,15 @@ import com.epam.prihodko.finaltask.exception.ConnectionPoolException;
 import com.epam.prihodko.finaltask.exception.DaoException;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
 import java.sql.*;
-import java.util.HashSet;
-import java.util.Set;
 
 public class MySQLOrderDao implements OrderDao{
     private final static String DATE_FORMAT = "yyyy-mm-dd";
@@ -25,18 +24,22 @@ public class MySQLOrderDao implements OrderDao{
         Order order = null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from order where id="+domainId;
+        String str = "select * from mydb.order where id="+domainId;
         try{
             connection =  Controller.connectionPool.takeConnection();//.prepareStatement(str);
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet!=null){
+            while (resultSet.next()){
                 order = new Order();
                 order.setId(resultSet.getInt("id"));
+                order.setApartmentClass(resultSet.getString("apartment_class"));
+                order.setRoomNumber(resultSet.getInt("room_number"));
                 order.setCouchette(resultSet.getInt("couchette"));
-                //order.setRoom_number(resultSet.getInt("room_number"));
                 order.setDate_in(resultSet.getString("date_in"));
                 order.setDate_out(resultSet.getString("date_out"));
+                order.setStatus(resultSet.getNString("status"));
+
+
             }
 
         }catch (SQLException e){
@@ -57,7 +60,7 @@ public class MySQLOrderDao implements OrderDao{
     public void create(Order order)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "insert into mydb.order (apartment_class,room_number,couchette,date_in,date_out,person_id) values(?,?,?,?,?,?)";
+        String str = "insert into mydb.order (apartment_class,room_number,couchette,date_in,date_out,person_id,status) values(?,?,?,?,?,?,?)";
         try{
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMAT);
             java.util.Date dateUtilIn = simpleDateFormat.parse(order.getDate_in());
@@ -72,6 +75,7 @@ public class MySQLOrderDao implements OrderDao{
             preparedStatement.setDate(4, dateSqlIn);
             preparedStatement.setDate(5, dateSqlOut);
             preparedStatement.setInt(6,order.getPersonId());
+            preparedStatement.setString(7,order.getStatus());
             preparedStatement.execute();
 
         }catch (SQLException e){
@@ -91,8 +95,9 @@ public class MySQLOrderDao implements OrderDao{
     public void update (Order order) throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "update order set couchette='"+order.getCouchette()+"', date_in='"+order.getDate_in()+"'," +
-                "date_out='"+order.getDate_out()+"' where id="+order.getId();
+        String str = "update mydb.order set couchette='"+order.getCouchette()+"', date_in='"+order.getDate_in()+"'," +
+                "date_out='"+order.getDate_out()+"',status='"+order.getStatus()+"',apartment_class='"+order.getApartmentClass()+"'," +
+                " room_number='"+order.getRoomNumber()+"' where id="+order.getId();
         try{
             connection =  Controller.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
@@ -114,31 +119,43 @@ public class MySQLOrderDao implements OrderDao{
         }
 
     }
-    public void delete (Order order) throws DaoException{  
-   /* public Order create ();
-    public Order persist(Order domain);
-    public void update (Order domain);
-    public void save (Order domain);
-    public void delete (Order domain);
-    */
-}
-    public Set getOrderSetByPersonId(int personId)throws DaoException{
-        Set setOrder = new HashSet();
+    public void delete (Order order) throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select apartment_class,room_number,couchette,date_in,date_out from mydb.order where person_id="+personId;
+        String str = "delete from mydb.order where id="+order.getId();
+        try{
+            connection =  Controller.connectionPool.takeConnection();
+            preparedStatement = connection.prepareStatement(str);
+            preparedStatement.execute();
+
+        }catch (SQLException e){
+            throw new DaoException("MySQLOrderDao has problem with Sql",e);
+        }catch (ConnectionPoolException e) {
+            throw new DaoException("MySQLOrderDao has problem with connection pool",e);
+        }
+        finally {
+            Controller.connectionPool.closeConnection(connection, preparedStatement);
+        }
+}
+    public Map<Integer, Order> getOrderMapByPersonId(int personId)throws DaoException{
+        Map<Integer, Order> mapOrder = new HashMap<Integer, Order>();
+        PreparedStatement preparedStatement = null;
+        Connection connection = null;
+        String str = "select id,apartment_class,room_number,couchette,date_in,date_out,status from mydb.order where person_id="+personId;
         try{
             connection =  Controller.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
+                int id = resultSet.getInt("id");
                 String apartment_class = resultSet.getString("apartment_class");
                 int room_number = resultSet.getInt("room_number");
                 int couchette = resultSet.getInt("couchette");
                 String date_in = resultSet.getString("date_in");
                 String date_out = resultSet.getString("date_out");
-                Order order = new Order(apartment_class,room_number,couchette,date_in,date_out);
-                setOrder.add(order);
+                String status = resultSet.getString("status");
+                Order order = new Order(id,apartment_class,room_number,couchette,date_in,date_out,status);
+                mapOrder.put(id,order);
             }
 
         }catch (SQLException e){
@@ -148,6 +165,36 @@ public class MySQLOrderDao implements OrderDao{
         } finally {
             Controller.connectionPool.closeConnection(connection, preparedStatement);
         }
-        return setOrder;
+        return mapOrder;
+    }
+    public Map<Integer, Order> getOrderMapByStatus(String status)throws DaoException{
+        Map<Integer, Order> mapOrder = new HashMap<Integer, Order>();
+        PreparedStatement preparedStatement = null;
+        Connection connection = null;
+        String str = "select id,apartment_class,room_number,couchette,date_in,date_out,status from mydb.order where status='"+status+"'";
+        try{
+            connection =  Controller.connectionPool.takeConnection();
+            preparedStatement = connection.prepareStatement(str);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                String apartment_class = resultSet.getString("apartment_class");
+                int room_number = resultSet.getInt("room_number");
+                int couchette = resultSet.getInt("couchette");
+                String date_in = resultSet.getString("date_in");
+                String date_out = resultSet.getString("date_out");
+                String statusOr = resultSet.getString("status");
+                Order order = new Order(id,apartment_class,room_number,couchette,date_in,date_out,statusOr);
+                mapOrder.put(id, order);
+            }
+
+        }catch (SQLException e){
+            throw new DaoException("MySQLOrderDao has problem with Sql",e);
+        }catch (ConnectionPoolException e) {
+            throw new DaoException("MySQLOrderDao has problem with connection pool",e);
+        } finally {
+            Controller.connectionPool.closeConnection(connection, preparedStatement);
+        }
+        return mapOrder;
     }
 }

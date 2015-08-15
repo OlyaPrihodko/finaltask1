@@ -12,6 +12,8 @@
 <fmt:message bundle="${loc}" key="locale.message.Login" var="Login"/>
 <fmt:message bundle="${loc}" key="locale.message.Signup" var="Signup"/>
 <fmt:message bundle="${loc}" key="locale.message.Back" var="Back"/>
+<fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
+<fmt:message bundle="${loc}" key="locale.message.Registration" var="Registration"/>
 <fmt:message bundle="${loc}" key="locale.message.Message1" var="Message1"/>
 <fmt:message bundle="${loc}" key="locale.message.Message3" var="Message3"/>
 <fmt:message bundle="${loc}" key="locale.message.Message4" var="Message4"/>
@@ -20,8 +22,11 @@
 <html lang="${language}">
 <head>
     <title>Registration</title>
-    <link rel="stylesheet" href="css/button.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <script type="text/javascript">
         <!--
         function check(){
@@ -108,6 +113,96 @@
 
 </head>
 <body>
+<c:set scope="session" value="/jsp/login.jsp" var="previous-page"/>
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">
+                        ${Registration}
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="controller" method="post">
+                        <input type="hidden" id="command" name="command" value=""/>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2" >
+                                <table class="table-bordered">
+                                    <tr>
+                                        <td><th>${Name}</th></td>
+                                        <td><input class="input-small" type="text" name="name" value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><th>${Surname}</th></td>
+                                        <td><input class="input-small" type="text" name="surname"  value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><th>${Email}</th></td>
+                                        <td><input class="input-small" type="text" name="email"  value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><th>${Phone}</th></td>
+                                        <td><input class="input-small" type="text" name="phone"  value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><th>${Login}</th></td>
+                                        <td><input class="input-small" type="text" name="login"  value=""/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><th>${Password}</th></td>
+                                        <td><input class="input-small" type="password" name="password"  value=""/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8  col-lg-offset-3" >
+                                <br/>
+                                <div class="btn-group">
+                                    <button  type="submit" class="btn btn-labeled btn-primary"
+                                             onclick="document.getElementById('command').value='signup';check();">
+                                      <span class="btn-label" ><i class="glyphicon glyphicon-ok"></i>
+                                      </span> ${Signup}
+                                    </button>
+                                    <button  type="submit" class="btn btn-labeled btn-primary"
+                                             onclick="document.getElementById('command').value='previous-page';">
+                                      <span class="btn-label" ><i class="fa fa-arrow-left"></i>
+                                      </span> ${Back}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
+                            <h5 class="text-center">${FinalTask}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+<%--
 <div align="center" >
 <h2>${Signup}</h2>
 <h3>${Message1}</h3>
@@ -155,5 +250,4 @@
 
 </form>
 <%--<a href="/jsp/login.jsp">${Back}</a>--%>
-</body>
-</html>
+--%>

@@ -6,6 +6,7 @@ import com.epam.prihodko.finaltask.exception.DaoException;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public interface OrderDao extends GenericDao<Order> {
@@ -15,7 +16,9 @@ public interface OrderDao extends GenericDao<Order> {
     public void delete(Order order)throws DaoException;
 
 
-    public Set getOrderSetByPersonId(int personId)throws DaoException;
+    public Map<Integer,Order> getOrderMapByPersonId(int personId)throws DaoException;
+    public Map<Integer,Order> getOrderMapByStatus(String status)throws DaoException;
+
 
    /* public Order create ();
     public Order persist(Order domain);

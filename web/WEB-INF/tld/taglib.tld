@@ -8,7 +8,25 @@
     <short-name>mytag</short-name>
     <uri>customtags</uri>
     <tag>
-        <name>mylist</name>
+        <name>maptag</name>
+        <tag-class>com.epam.prihodko.finaltask.customTags.AllListTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>map</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>lang</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+</taglib>
+        <!--
+         <tag>
+        <name>settag</name>
         <tag-class>com.epam.prihodko.finaltask.customTags.AllListTag</tag-class>
         <body-content>scriptless</body-content>
         <attribute>
@@ -17,4 +35,6 @@
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>
-</taglib>
+
+
+        -->

@@ -104,7 +104,9 @@ public class MySQLAccountDao implements AccountDao{
             preparedStatement=connection.prepareStatement(s);
             ResultSet resultSet = preparedStatement.executeQuery();
             b=resultSet.next();
+            if(b){
             account.setId(resultSet.getInt("id"));
+            }
         }catch (SQLException e){
            // e.printStackTrace();
             throw new DaoException("Problem with Sql",e);
