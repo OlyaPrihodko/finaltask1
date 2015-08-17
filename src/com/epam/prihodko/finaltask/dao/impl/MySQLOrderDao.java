@@ -101,12 +101,6 @@ public class MySQLOrderDao implements OrderDao{
         try{
             connection =  Controller.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
-           /* preparedStatement.setString(1,person.getName());
-            preparedStatement.setString(2, person.getSurname());
-            preparedStatement.setString(3, person.getEmail());
-            preparedStatement.setString(4, person.getPhone());
-            preparedStatement.setInt(5, person.getId());
-            */
             preparedStatement.execute();
 
         }catch (SQLException e){

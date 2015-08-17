@@ -7,9 +7,10 @@
 <fmt:message bundle="${loc}" key="locale.message.Message2" var="Message2"/>
 <fmt:message bundle="${loc}" key="locale.message.Back" var="Back"/>
 <fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
+<fmt:message bundle="${loc}" key="locale.message.Error" var="Error"/>
 <html lang="${language}">
 <head>
-    <title>Error</title>
+    <title>${Error}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -23,14 +24,17 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h2 class="panel-title text-center">
-                        ${Message2}
+                        ${Error}
                     </h2>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="controller" method="post">
                         <input type="hidden" id="command" name="command" value=""/>
+                        <div class="row text-center">
+                            <h3>${Message2}</h3>
+                        </div>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-lg-offset-3">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 col-lg-offset-5">
                                 <div class="btn-group">
                                     <button  type="submit" class="btn btn-labeled btn-primary"
                                              onclick="document.getElementById('command').value='previous-page';">
@@ -60,15 +64,3 @@
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-<%--
-<div align="center" >
-<h2>${Message2}</h2>
-<form action="controller" method="post">
-    <input type="hidden" id="command" name="command" value=""/>
-    <br/>
-    <div align="center">
-        <input class="button" type="submit" onclick="document.getElementById('command').value='previous-page';" value="${Back}">
-    </div>
-</form>
-</div>
---%>

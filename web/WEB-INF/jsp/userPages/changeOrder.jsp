@@ -6,11 +6,11 @@
 <fmt:setBundle basename="/com.epam.prihodko.finaltask/localization.locale" var="loc"/>
 <fmt:message bundle="${loc}" key="locale.message.Back" var="Back"/>
 
-<fmt:message bundle="${loc}" key="locale.message.OrderApartmentClass" var="ApartmentClass"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderRoomNumber" var="RoomNumber"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderCouchette" var="Couchette"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderDatein" var="Datein"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderDateout" var="Dateout"/>
+<fmt:message bundle="${loc}" key="locale.message.ApartmentClass" var="ApartmentClass"/>
+<fmt:message bundle="${loc}" key="locale.message.RoomNumber" var="RoomNumber"/>
+<fmt:message bundle="${loc}" key="locale.message.Couchette" var="Couchette"/>
+<fmt:message bundle="${loc}" key="locale.message.Datein" var="Datein"/>
+<fmt:message bundle="${loc}" key="locale.message.Dateout" var="Dateout"/>
 <fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
 <fmt:message bundle="${loc}" key="locale.message.Message12" var="Message12"/>
 <html lang="${language}">
@@ -23,7 +23,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<c:set scope="session" value="/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
+<c:set scope="session" value="/WEB-INF/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
 
 <jsp:useBean id="order" beanName="com.epam.prihodko.finaltask.domain.Order"
              type="com.epam.prihodko.finaltask.domain.Order" scope="session"/>

@@ -9,7 +9,6 @@ public class Order implements java.io.Serializable{
     private String date_out;
     private String status;
     private int personId;
-    private int checkId;
 
     public Order(){}
 
@@ -58,9 +57,6 @@ public class Order implements java.io.Serializable{
     public void setStatus(String status) {
         this.status = status;
     }
-    public void setCheckId(int checkId) {
-        this.checkId = checkId;
-    }
 
     public int getId() {
         return id;
@@ -85,9 +81,6 @@ public class Order implements java.io.Serializable{
     }
     public String getStatus() {
         return status;
-    }
-    public int getCheckId() {
-        return checkId;
     }
 
     @Override

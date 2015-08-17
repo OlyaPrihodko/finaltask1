@@ -21,7 +21,7 @@
 
 <html lang="${language}">
 <head>
-    <title>Registration</title>
+    <title>${Registration}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -113,7 +113,7 @@
 
 </head>
 <body>
-<c:set scope="session" value="/jsp/login.jsp" var="previous-page"/>
+<c:set scope="session" value="/WEB-INF/jsp/login.jsp" var="previous-page"/>
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">

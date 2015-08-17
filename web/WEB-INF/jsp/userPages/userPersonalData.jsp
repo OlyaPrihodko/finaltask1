@@ -19,7 +19,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="${language}">
 <head>
-    <title>Personal Data</title>
+    <title>${Message8}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -28,8 +28,8 @@
 </head>
   <body>
 
-  <c:set scope="session" value="/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
-  <jsp:useBean id="user" beanName="com.epam.prihodko.finaltask.domain.Person"
+  <c:set scope="session" value="/WEB-INF/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
+  <jsp:useBean id="person" beanName="com.epam.prihodko.finaltask.domain.Person"
                type="com.epam.prihodko.finaltask.domain.Person" scope="session"/>
   <div class="container-fluid" >
       <div class="row">
@@ -49,25 +49,25 @@
                                           <tr>
                                               <td><th>${Name}</th></td>
                                               <td>
-                                                  <input class="input-small" type="text" name="name" value="<jsp:getProperty name="user" property="name"/>"/>
+                                                  <input class="input-small" type="text" name="name" value="<jsp:getProperty name="person" property="name"/>"/>
                                               </td>
                                           </tr>
                                           <tr>
                                               <td><th>${Surname}</th></td>
                                               <td>
-                                                  <input class="input-small" type="text" name="surname" value="<jsp:getProperty name="user" property="surname"/>">
+                                                  <input class="input-small" type="text" name="surname" value="<jsp:getProperty name="person" property="surname"/>">
                                               </td>
                                           </tr>
                                           <tr>
                                               <td><th>${Email}</th></td>
                                               <td>
-                                                  <input class="input-small" type="text" name="email" value="<jsp:getProperty name="user" property="email"/>" >
+                                                  <input class="input-small" type="text" name="email" value="<jsp:getProperty name="person" property="email"/>" >
                                               </td>
                                           </tr>
                                           <tr>
                                               <td><th>${Phone}</th></td>
                                               <td>
-                                                  <input class="input-small" type="text" name="phone" value="<jsp:getProperty name="user" property="phone"/>" >
+                                                  <input class="input-small" type="text" name="phone" value="<jsp:getProperty name="person" property="phone"/>" >
                                               </td>
                                           </tr>
                                   </table>

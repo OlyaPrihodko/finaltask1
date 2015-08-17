@@ -19,7 +19,7 @@ public class UpdatePersonCommand implements ICommand {
         DAOFactory MySQLDaoFactory =
                 DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
         PersonDao personDao = MySQLDaoFactory.getPersonDao();
-        Person person = (Person)request.getSession().getAttribute(ResponseParameterName.USER);
+        Person person = (Person)request.getSession().getAttribute(ResponseParameterName.PERSON);
 
         person.setName(request.getParameter(RequestParameterName.PARAM_NAME_NAME));
         person.setSurname(request.getParameter(RequestParameterName.PARAM_NAME_SURNAME));

@@ -4,20 +4,21 @@
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <fmt:setLocale value="${language}" />
 <fmt:setBundle basename="/com.epam.prihodko.finaltask/localization.locale" var="loc"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderDatein" var="Datein"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderDateout" var="Dateout"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderApartmentClass" var="ApartmentClass"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderRoomNumber" var="RoomNumber"/>
-<fmt:message bundle="${loc}" key="locale.message.OrderCouchette" var="Couchette"/>
+<fmt:message bundle="${loc}" key="locale.message.Datein" var="Datein"/>
+<fmt:message bundle="${loc}" key="locale.message.Dateout" var="Dateout"/>
+<fmt:message bundle="${loc}" key="locale.message.ApartmentClass" var="ApartmentClass"/>
+<fmt:message bundle="${loc}" key="locale.message.RoomNumber" var="RoomNumber"/>
+<fmt:message bundle="${loc}" key="locale.message.Couchette" var="Couchette"/>
 <fmt:message bundle="${loc}" key="locale.message.ToOrder" var="ToOrder"/>
 <fmt:message bundle="${loc}" key="locale.message.DateFormat" var="DateFormat"/>
 <fmt:message bundle="${loc}" key="locale.message.Back" var="Back"/>
 <fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
+<fmt:message bundle="${loc}" key="locale.message.Message15" var="Message15"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="${language}">
 <head>
-    <title>Creation an order</title>
+    <title>${Message15}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -25,7 +26,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<c:set scope="session" value="/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
+<c:set scope="session" value="/WEB-INF/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
@@ -47,7 +48,7 @@
                                             <select class="form-control" name="apartment-class" id ="apartment-class" >
                                                 <option value="BedRoom" onclick="document.getElementById('apartment-class').value='BR'">Bed room</option>
                                                 <option value="FamilyRoom" onclick="document.getElementById('apartment-class').value='FR'">Family room</option>
-                                                <option value="HoneyRoom" onclick="document.getElementById('apartment-class').value='HR'">Honeymoon room</option>
+                                                <option value="HoneymoonRoom" onclick="document.getElementById('apartment-class').value='HR'">Honeymoon room</option>
                                             </select>
                                         </td>
                                     </tr>

@@ -14,6 +14,9 @@ public final class RequestParameterName {
     public static final String DATE_IN = "datein";
     public static final String DATE_OUT = "dateout";
     public static final String ROOM_NUMBER = "room-number";
+    public static final String STATUS_NEW = "new";
+    public static final String STATUS_ORDERED = "ordered";
+    public static final String APARTMENT_STATUS_NOT_AVAILABLE = "not available";
 
 
 }

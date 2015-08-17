@@ -731,9 +731,11 @@
       <column name="price" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="couchette" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="room_number" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
       <column name="class_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="apartment_ibfk_1" columns="class_id" ref-table="apartment_class" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="check_ibfk_2" table="check" schema="" catalog="mydb" columns="apartment_id"/>
     </table>
     <table name="apartment_class" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
@@ -745,8 +747,10 @@
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="price" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="apartment_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="order_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="order_ibfk_3" table="order" schema="" catalog="mydb" columns="check_id"/>
+      <foreign-key name="check_ibfk_1" columns="order_id" ref-table="order" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="check_ibfk_2" columns="apartment_id" ref-table="apartment" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="order" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -757,10 +761,9 @@
       <column name="date_out" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
       <column name="status" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
       <column name="person_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="check_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="order_ibfk_1" columns="person_id" ref-table="person" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="order_ibfk_3" columns="check_id" ref-table="check" ref-schema="" ref-catalog="mydb" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="check_ibfk_1" table="check" schema="" catalog="mydb" columns="order_id"/>
     </table>
     <table name="person" schema="" catalog="mydb" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

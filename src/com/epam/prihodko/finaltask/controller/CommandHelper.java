@@ -46,7 +46,12 @@ public class CommandHelper {
             case REMOVE_ORDER:
                 iCommand = new DeleteOrderCommand();
                 break;
-
+            case FIND_APARTMENT:
+                iCommand = new FindApartmentCommand();
+                break;
+            case TO_RESERVE_APARTMENT:
+                iCommand = new ToReserveApartmentCommand();
+                break;
         }
         return iCommand;
     }

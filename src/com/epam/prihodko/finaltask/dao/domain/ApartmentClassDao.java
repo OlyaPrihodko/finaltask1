@@ -9,4 +9,6 @@ public interface ApartmentClassDao extends GenericDao<ApartmentClass> {
     public void create(ApartmentClass apartmentClass)throws DaoException;
     public void update(ApartmentClass apartmentClass) throws DaoException;
     public void delete(ApartmentClass apartmentClass)throws DaoException;
+
+    public int findIdByType(ApartmentClass apartmentClass)throws DaoException;
 }

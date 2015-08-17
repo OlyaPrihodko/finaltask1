@@ -41,4 +41,27 @@ public class MySQLApartmentClassDao implements ApartmentClassDao {
     public void create (ApartmentClass apartmentClass)throws DaoException {}
     public void update (ApartmentClass apartmentClass)throws DaoException {}
     public void delete (ApartmentClass apartmentClass)throws DaoException {}
+    public int findIdByType(ApartmentClass apartmentClass)throws DaoException {
+        int idApartmentClass=0;
+        PreparedStatement preparedStatement = null;
+        Connection connection = null;
+        String str = "select * from mydb.apartment_class where apartment_class.type='"+apartmentClass.getType()+"'";
+        try{
+            connection =  Controller.connectionPool.takeConnection();//.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(str);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+               idApartmentClass=resultSet.getInt("id");
+            }
+
+        }catch (SQLException e){
+            throw new DaoException("MySQLOrderDao has problem with Sql",e);
+        }catch (ConnectionPoolException e) {
+            throw new DaoException("MySQLOrderDao has problem with connection pool",e);
+        }
+        finally {
+            Controller.connectionPool.closeConnection(connection,preparedStatement);
+        }
+        return idApartmentClass;
+    }
 }

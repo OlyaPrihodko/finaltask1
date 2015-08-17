@@ -11,7 +11,7 @@
 <fmt:message bundle="${loc}" key="locale.message.Message11" var="Message11"/>
 <html lang="${language}">
 <head>
-    <title> Main admin page</title>
+    <title>${Message11}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -19,7 +19,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<c:set scope="session" value="/jsp/login.jsp" var="previous-page"/>
+<c:set scope="session" value="/WEB-INF/jsp/login.jsp" var="previous-page"/>
 <jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.domain.MapBean"
              type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
 <div class="container-fluid" >
@@ -34,6 +34,7 @@
                 <div class="panel-body">
                     <form role="form" action="controller" method="post">
                         <input type="hidden" id="command" name="command" value=""/>
+                        <input type="hidden" id="orderId" name="orderId" value=""/>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2">
                                 <div class="btn-group">
@@ -50,7 +51,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-12">
-                                <mytag:maptag map="${mapBeanOrder}" lang="${language}" />
+                                <mytag:maptag map="${mapBeanOrder}" lang="${language}" user="${sessionScope.user}"/>
                             </div>
                         </div>
                     </form>

@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 import java.util.Set;
 
-
 public class MakeAnOrderCommand implements ICommand {
 private static final String STATUS = "new";
     @Override
@@ -34,7 +33,7 @@ private static final String STATUS = "new";
 
         Order order = new Order(apartmentClass,roomNumber,couchette,datein,dateout,STATUS);
         try{
-            Person person = (Person)request.getSession().getAttribute("user");
+            Person person = (Person)request.getSession().getAttribute(ResponseParameterName.PERSON);
             order.setPersonId(person.getId());
             orderDao.create(order);
             //чтоб обновлялась таблица списка заказов

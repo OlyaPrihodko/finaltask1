@@ -14,7 +14,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="${language}">
 <head>
-    <title>Personal Area</title>
+    <title>${Message7}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -22,8 +22,10 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<c:set scope="session" value="/jsp/login.jsp" var="previous-page"/>
+<c:set scope="session" value="/WEB-INF/jsp/login.jsp" var="previous-page"/>
 <jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.domain.MapBean"
+             type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
+<jsp:useBean id="mapBeanCheck" beanName="com.epam.prihodko.finaltask.domain.MapBean"
              type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
 <div class="container-fluid" >
 <div class="row">
@@ -40,24 +42,23 @@
                     <input type="hidden" id="orderId" name="orderId" value=""/>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2" >
-                                <div class="btn-group">
-                                    <button  type="submit" class="btn btn-labeled btn-primary"
-                                             onclick="document.getElementById('command').value='go-to-user-personal-data-page';">
-                                        <span class="btn-label" ><i class="fa fa-edit"></i>
-                                         </span> ${PersonalData}
-                                    </button>
-                                    <button  type="submit" class="btn btn-labeled btn-primary"
-                                             onclick="document.getElementById('command').value='go-to-make-an-order-page';">
-                                        <span class="btn-label" ><i class="fa fa-plus"></i>
-                                         </span> ${ToOrder}
-                                    </button>
-                                    <button  type="submit" class="btn btn-labeled btn-danger"
-                                             onclick="document.getElementById('command').value='logout';">
-                                        <span class="btn-label" ><i class="fa fa-sign-out"></i>
-                                        </span> ${Logout}
-                                    </button>
-                                </div>
-                            <%--</form> --%>
+                            <div class="btn-group">
+                                <button  type="submit" class="btn btn-labeled btn-primary"
+                                         onclick="document.getElementById('command').value='go-to-user-personal-data-page';">
+                                    <span class="btn-label" ><i class="fa fa-edit"></i>
+                                     </span> ${PersonalData}
+                                </button>
+                                <button  type="submit" class="btn btn-labeled btn-primary"
+                                         onclick="document.getElementById('command').value='go-to-make-an-order-page';">
+                                    <span class="btn-label" ><i class="fa fa-plus"></i>
+                                     </span> ${ToOrder}
+                                </button>
+                                <button  type="submit" class="btn btn-labeled btn-danger"
+                                         onclick="document.getElementById('command').value='logout';">
+                                    <span class="btn-label" ><i class="fa fa-sign-out"></i>
+                                    </span> ${Logout}
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="row text-center">
@@ -65,7 +66,29 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-12">
-                            <mytag:maptag map="${mapBeanOrder}" lang="${language}" />
+                            <div id="accordion" class="panel-group">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#collapse-1" data-parent ="#accordion" data-toggle="collapse">Заказы</a></h4>
+                                    </div>
+                                    <div id="collapse-1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <mytag:maptag map="${mapBeanOrder}" lang="${language}" user="${sessionScope.user}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#collapse-2" data-parent ="#accordion" data-toggle="collapse">Чеки</a></h4>
+                                    </div>
+                                    <div id="collapse-2" class="panel-collapse collapse ">
+                                        <div class="panel-body">
+                                            <mytag:maptag map="${mapBeanCheck}" lang="${language}" user="${sessionScope.user}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </form>
