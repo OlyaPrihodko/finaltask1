@@ -37,6 +37,9 @@ public final class ConnectionPool {
             poolSize = 15;
         }
     }
+    public BlockingQueue<Connection> getBlockingQueue(){
+        return this.connectionQueue;
+    }
     public void initPoolData() throws ConnectionPoolException {
         Locale.setDefault(Locale.ENGLISH);
         try {
@@ -59,7 +62,7 @@ public final class ConnectionPool {
     public void dispose() {
         clearConnectionQueue();
     }
-    private void clearConnectionQueue() {
+    public void clearConnectionQueue() {
         try {
         closeConnectionsQueue(givenAwayConQueue);
         closeConnectionsQueue(connectionQueue);
@@ -107,7 +110,7 @@ public final class ConnectionPool {
 //	logger.log(Level.ERROR, "Statement isn't closed.");
         }
     }
-    private void closeConnectionsQueue(BlockingQueue<Connection> queue) throws SQLException {
+    public void closeConnectionsQueue(BlockingQueue<Connection> queue) throws SQLException {
         Connection connection;
         while ((connection = queue.poll()) != null) {
             if (!connection.getAutoCommit()) {
@@ -133,7 +136,8 @@ public final class ConnectionPool {
         }
 
         @Override
-        public void close() throws SQLException { if (connection.isClosed()) {
+        public void close() throws SQLException {
+            if (connection.isClosed()) {
             throw new SQLException("Attempting to close closedconnection.");
         }
 

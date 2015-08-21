@@ -4,54 +4,82 @@ import com.epam.prihodko.finaltask.logic.ICommand;
 import com.epam.prihodko.finaltask.logic.impl.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CommandHelper {
+
+    private final static Map<CommandName,ICommand> mapCommand = new HashMap<CommandName,ICommand>();
     public ICommand defineCommand(HttpServletRequest request){
+        ICommand goToPageCommand = new GoToPageCommand();
+        mapCommand.put(CommandName.LOGIN,new LoginCommand());
+        mapCommand.put(CommandName.LOGOUT,new LogoutCommand());
+        mapCommand.put(CommandName.SIGNUP,new SignUpCommand());
+        mapCommand.put(CommandName. UPDATE,new UpdatePersonCommand());
+        mapCommand.put(CommandName.GO_TO_REGISTR_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.GO_TO_APARTMENTTABLE_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.GO_TO_USER_PERSONAL_DATA_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.GO_TO_MAKE_AN_ORDER_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.GO_TO_CHANGE_ORDER_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.PREVIOUS_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.CHANGE,goToPageCommand);
+        mapCommand.put(CommandName.GO_TO_CHANGE_ORDER_PAGE,goToPageCommand);
+        mapCommand.put(CommandName.MAKE_AN_ORDER,new MakeAnOrderCommand());
+        mapCommand.put(CommandName.UPDATE_ORDER,new UpdateOrderCommand());
+        mapCommand.put(CommandName.REMOVE_ORDER,new DeleteOrderCommand());
+        mapCommand.put(CommandName.FIND_APARTMENT,new FindApartmentCommand());
+        mapCommand.put(CommandName.TO_RESERVE_APARTMENT,new ToReserveApartmentCommand());
+
         CommandName commandName = CommandName.valueOf(request.getParameter(RequestParameterName.COMMAND_NAME).toUpperCase().replace("-","_"));
         ICommand iCommand = null;
         switch (commandName){
             case LOGIN:
-                iCommand = new LoginCommand();
+                iCommand = mapCommand.get(CommandName.LOGIN);
                 break;
             case LOGOUT:
-                iCommand = new LogoutCommand();
+                iCommand = mapCommand.get(CommandName.LOGOUT);
                 break;
             case SIGNUP:
-                iCommand = new SignUpCommand();
+                iCommand = mapCommand.get(CommandName.SIGNUP);
                 break;
             case UPDATE:
-                iCommand = new UpdatePersonCommand();
+                iCommand = mapCommand.get(CommandName.UPDATE);
                 break;
             case GO_TO_REGISTR_PAGE:
-                iCommand = new GoToPageCommand();
+                iCommand = mapCommand.get(CommandName.GO_TO_REGISTR_PAGE);
+                break;
+            case GO_TO_APARTMENTTABLE_PAGE:
+                iCommand = mapCommand.get(CommandName.GO_TO_APARTMENTTABLE_PAGE);
                 break;
             case GO_TO_USER_PERSONAL_DATA_PAGE:
-                iCommand = new GoToPageCommand();
+                iCommand = mapCommand.get(CommandName.GO_TO_USER_PERSONAL_DATA_PAGE);
                 break;
             case GO_TO_MAKE_AN_ORDER_PAGE:
-                iCommand = new GoToPageCommand();
+                iCommand = mapCommand.get(CommandName.GO_TO_MAKE_AN_ORDER_PAGE);
                 break;
             case MAKE_AN_ORDER:
-                iCommand = new MakeAnOrderCommand();
+                iCommand = mapCommand.get(CommandName.MAKE_AN_ORDER);
                 break;
             case PREVIOUS_PAGE:
-                iCommand = new GoToPageCommand();
+                iCommand = mapCommand.get(CommandName.PREVIOUS_PAGE);
                 break;
             case GO_TO_CHANGE_ORDER_PAGE:
-                iCommand = new GoToPageCommand();
+                iCommand = mapCommand.get(CommandName.GO_TO_CHANGE_ORDER_PAGE);
                 break;
             case UPDATE_ORDER:
-                iCommand = new UpdateOrderCommand();
+                iCommand = mapCommand.get(CommandName.UPDATE_ORDER);
                 break;
             case REMOVE_ORDER:
-                iCommand = new DeleteOrderCommand();
+                iCommand = mapCommand.get(CommandName.REMOVE_ORDER);
                 break;
             case FIND_APARTMENT:
-                iCommand = new FindApartmentCommand();
+                iCommand = mapCommand.get(CommandName.FIND_APARTMENT);
                 break;
             case TO_RESERVE_APARTMENT:
-                iCommand = new ToReserveApartmentCommand();
+                iCommand = mapCommand.get(CommandName.TO_RESERVE_APARTMENT);
                 break;
+            case CHANGE:
+                iCommand = mapCommand.get(CommandName.CHANGE);
         }
         return iCommand;
     }

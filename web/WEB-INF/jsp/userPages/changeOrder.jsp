@@ -13,6 +13,8 @@
 <fmt:message bundle="${loc}" key="locale.message.Dateout" var="Dateout"/>
 <fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
 <fmt:message bundle="${loc}" key="locale.message.Message12" var="Message12"/>
+<fmt:message bundle="${loc}" key="locale.message.Update" var="Update"/>
+<fmt:message bundle="${loc}" key="locale.message.Logout" var="Logout"/>
 <html lang="${language}">
 <head>
     <title>${Message12}</title>
@@ -25,8 +27,8 @@
 <body>
 <c:set scope="session" value="/WEB-INF/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
 
-<jsp:useBean id="order" beanName="com.epam.prihodko.finaltask.domain.Order"
-             type="com.epam.prihodko.finaltask.domain.Order" scope="session"/>
+<jsp:useBean id="order" beanName="com.epam.prihodko.finaltask.entity.Order"
+             type="com.epam.prihodko.finaltask.entity.Order" scope="session"/>
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
@@ -41,8 +43,8 @@
                         <input type="hidden" id="command" name="command" value=""/>
                         <input type="hidden" id="orderId" name="orderId" value=""/>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-lg-offset-3" >
-                                <table class="table-bordered">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 col-lg-offset-2" >
+                                <table class="table table-bordered">
                                     <tr>
                                         <td><th>${ApartmentClass}</th></td>
                                         <td>
@@ -100,13 +102,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
-                            <h5 class="text-center">${FinalTask}</h5>
-                        </div>
-                    </div>
-                </div>
+                <%@include file="/WEB-INF/jsp/footerPart.jsp"%>
             </div>
         </div>
     </div>

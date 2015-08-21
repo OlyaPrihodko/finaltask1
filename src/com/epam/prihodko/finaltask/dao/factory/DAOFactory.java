@@ -1,8 +1,8 @@
 package com.epam.prihodko.finaltask.dao.factory;
-
-import com.epam.prihodko.finaltask.dao.domain.*;
+import com.epam.prihodko.finaltask.dao.entity.*;
 
 public abstract class DAOFactory {
+    private final static MySQLDAOFactory mySqlDAOFactory = new MySQLDAOFactory();
     public static enum DataSourceName{
         MYSQL
     }
@@ -17,7 +17,7 @@ public abstract class DAOFactory {
     public static DAOFactory getDAOFactory(DataSourceName dataSourceName ){
         switch (dataSourceName){
             case MYSQL:
-                return new MySQLDAOFactory();
+                return mySqlDAOFactory;
             default:
                 return null;
         }

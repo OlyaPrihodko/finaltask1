@@ -1,4 +1,4 @@
-package com.epam.prihodko.finaltask.domain;
+package com.epam.prihodko.finaltask.entity;
 
 public class Status implements java.io.Serializable{
     private int id=0;

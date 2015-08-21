@@ -1,7 +1,7 @@
-package com.epam.prihodko.finaltask.dao.domain;
+package com.epam.prihodko.finaltask.dao.entity;
 
 import com.epam.prihodko.finaltask.dao.GenericDao;
-import com.epam.prihodko.finaltask.domain.ApartmentClass;
+import com.epam.prihodko.finaltask.entity.ApartmentClass;
 import com.epam.prihodko.finaltask.exception.DaoException;
 
 public interface ApartmentClassDao extends GenericDao<ApartmentClass> {

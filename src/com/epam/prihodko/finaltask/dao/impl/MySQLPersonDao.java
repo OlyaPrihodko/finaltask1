@@ -1,9 +1,10 @@
 package com.epam.prihodko.finaltask.dao.impl;
 
 
-import com.epam.prihodko.finaltask.controller.Controller;
-import com.epam.prihodko.finaltask.dao.domain.PersonDao;
-import com.epam.prihodko.finaltask.domain.Person;
+import com.epam.prihodko.finaltask.controller.listener.ContextServletListener;
+import com.epam.prihodko.finaltask.dao.DataBaseParameterName;
+import com.epam.prihodko.finaltask.dao.entity.PersonDao;
+import com.epam.prihodko.finaltask.entity.Person;
 import com.epam.prihodko.finaltask.exception.ConnectionPoolException;
 import com.epam.prihodko.finaltask.exception.DaoException;
 
@@ -13,44 +14,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MySQLPersonDao implements PersonDao {
-    //private Connection connection;
     public Person getById(int domainId)throws DaoException {
         Person person = null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
         String str="select * from person where id="+domainId;
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                String name = resultSet.getString("name");
-                String surname = resultSet.getString("surname");
-                String email = resultSet.getString("email");
-                String phone = resultSet.getString("phone");
+                String name = resultSet.getString(DataBaseParameterName.NAME);
+                String surname = resultSet.getString(DataBaseParameterName.SURNAME);
+                String email = resultSet.getString(DataBaseParameterName.EMAIL);
+                String phone = resultSet.getString(DataBaseParameterName.PHONE);
                 person = new Person(name,surname,email,phone);
             }
 
         }catch (SQLException e){
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLPersonDao has problem with Sql in getById method",e);
         }catch (ConnectionPoolException e) {
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLPersonDao has problem with connection pool in getById method",e);
         }
         finally {
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
-
     return person;
     }
     public void create(Person person)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-     // String setnames = "set names 'utf8'";
         String str = "insert into person (name, surname, email, phone, account_id) values(?,?,?,?,?)";
         try{
-            connection =  Controller.connectionPool.takeConnection();
-          //  preparedStatement = connection.prepareStatement(setnames);
-          //  preparedStatement.execute();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             preparedStatement.setString(1,person.getName());
             preparedStatement.setString(2,person.getSurname());
@@ -60,42 +56,31 @@ public class MySQLPersonDao implements PersonDao {
             preparedStatement.execute();
 
         }catch (SQLException e){
-            // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLPersonDao has problem with Sql in create method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLPersonDao has problem with connection pool in create method",e);
         }
         finally {
-
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
     }
     public void update(Person person)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        //переписать ...хотя может и с такими вопросами будет работать
         String str = "update person set name='"+person.getName()+"', surname='"+person.getSurname()+"'," +
                 " email='"+person.getEmail()+"', phone='"+person.getPhone()+"' where id="+person.getId();
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
-           /* preparedStatement.setString(1,person.getName());
-            preparedStatement.setString(2, person.getSurname());
-            preparedStatement.setString(3, person.getEmail());
-            preparedStatement.setString(4, person.getPhone());
-            preparedStatement.setInt(5, person.getId());
-            */
             preparedStatement.execute();
 
         }catch (SQLException e){
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLPersonDao has problem with Sql in update method",e);
         }catch (ConnectionPoolException e) {
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLPersonDao has problem with connection pool in update method",e);
         }
         finally {
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
     }
     public void delete(Person person)throws DaoException{}
@@ -105,38 +90,28 @@ public class MySQLPersonDao implements PersonDao {
         Connection connection = null;
         String str="select * from person where account_id="+domainId;
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection = ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                String name = resultSet.getString("name");
-                String surname = resultSet.getString("surname");
-                String email = resultSet.getString("email");
-                String phone = resultSet.getString("phone");
-                int id = resultSet.getInt("id");
+                String name = resultSet.getString(DataBaseParameterName.NAME);
+                String surname = resultSet.getString(DataBaseParameterName.SURNAME);
+                String email = resultSet.getString(DataBaseParameterName.EMAIL);
+                String phone = resultSet.getString(DataBaseParameterName.PHONE);
+                int id = resultSet.getInt(DataBaseParameterName.ID);
                 person = new Person(name,surname,email,phone);
-                person.setAccountId(domainId);//устанавливаю accoubt_id ... и хорошо бы просто id
-                person.setId(id);//пригодилось в логин команд а потом в make order
+                person.setAccountId(domainId);
+                person.setId(id);
             }
 
         }catch (SQLException e){
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLPersonDao has problem with Sql in getByAccountId method",e);
         }catch (ConnectionPoolException e) {
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLPersonDao has problem with connection pool in getByAccountId method",e);
         }
         finally {
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
-
         return person;
     }
-
-
-
-
-   /* public  Person create ();
-    public Person persist(Person domain);
-    public void update (Person domain);
-    public void save (Person domain);
-    public void delete (Person domain);*/
 }

@@ -1,7 +1,8 @@
-package com.epam.prihodko.finaltask.domain;
+package com.epam.prihodko.finaltask.entity;
+
 
 public class Apartment implements java.io.Serializable{
-    private int id=0;
+    private int id;
     private int price;
     private int couchette;
     private int roomNumber;
@@ -62,6 +63,7 @@ public class Apartment implements java.io.Serializable{
 
     @Override
     public String toString(){
+
         return  "<td>"+this.getId()+"</td>"+
                 "<td>"+this.getPrice()+"</td>"+
                 "<td>"+this.getRoomNumber()+"</td>"+

@@ -1,4 +1,4 @@
-package com.epam.prihodko.finaltask.domain;
+package com.epam.prihodko.finaltask.entity;
 
 public class Check implements java.io.Serializable{
     private int id=0;
@@ -42,7 +42,7 @@ public class Check implements java.io.Serializable{
     @Override
     public String toString(){
         return  "<td>"+this.getId()+"</td>"+
-                "<td>"+this.getPrice()+"</td>"+
+                "<td>"+this.getPrice()+" $"+"</td>"+
                 "<td>"+this.getApatrmentId()+"</td>"+
                 "<td>"+this.getOrderId()+"</td>";
     }

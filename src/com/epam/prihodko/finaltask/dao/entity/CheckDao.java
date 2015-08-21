@@ -1,10 +1,8 @@
-package com.epam.prihodko.finaltask.dao.domain;
+package com.epam.prihodko.finaltask.dao.entity;
 
 import com.epam.prihodko.finaltask.dao.GenericDao;
-import com.epam.prihodko.finaltask.domain.Check;
+import com.epam.prihodko.finaltask.entity.Check;
 import com.epam.prihodko.finaltask.exception.DaoException;
-
-import java.util.Map;
 
 public interface CheckDao extends GenericDao<Check> {
     public Check getById(int domainId) throws DaoException;

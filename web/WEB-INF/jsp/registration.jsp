@@ -127,37 +127,37 @@
                     <form role="form" action="controller" method="post">
                         <input type="hidden" id="command" name="command" value=""/>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2" >
-                                <table class="table-bordered">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  col-lg-offset-3" >
+                                <table class="table table-bordered">
                                     <tr>
-                                        <td><th>${Name}</th></td>
-                                        <td><input class="input-small" type="text" name="name" value=""/></td>
+                                        <td><strong>${Name}</strong></td>
+                                        <td><input class="span3" type="text" name="name" value=""/></td>
                                     </tr>
                                     <tr>
-                                        <td><th>${Surname}</th></td>
-                                        <td><input class="input-small" type="text" name="surname"  value=""/></td>
+                                        <td><strong>${Surname}</strong></td>
+                                        <td><input class=" span3" type="text" name="surname"  value=""/></td>
                                     </tr>
                                     <tr>
-                                        <td><th>${Email}</th></td>
-                                        <td><input class="input-small" type="text" name="email"  value=""/></td>
+                                        <td><strong>${Email}</strong></td>
+                                        <td><input class=" span3" type="text" name="email"  value=""/></td>
                                     </tr>
                                     <tr>
-                                        <td><th>${Phone}</th></td>
-                                        <td><input class="input-small" type="text" name="phone"  value=""/></td>
+                                        <td><strong>${Phone}</strong></td>
+                                        <td><input class=" span3" type="text" name="phone"  value=""/></td>
                                     </tr>
                                     <tr>
-                                        <td><th>${Login}</th></td>
-                                        <td><input class="input-small" type="text" name="login"  value=""/></td>
+                                        <td><strong>${Login}</strong></td>
+                                        <td><input class="span3" type="text" name="login"  value=""/></td>
                                     </tr>
                                     <tr>
-                                        <td><th>${Password}</th></td>
-                                        <td><input class="input-small" type="password" name="password"  value=""/></td>
+                                        <td><strong>${Password}</strong></td>
+                                        <td><input class=" span3" type="password" name="password"  value=""/></td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8  col-lg-offset-3" >
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8  col-lg-offset-4" >
                                 <br/>
                                 <div class="btn-group">
                                     <button  type="submit" class="btn btn-labeled btn-primary"
@@ -175,13 +175,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
-                            <h5 class="text-center">${FinalTask}</h5>
-                        </div>
-                    </div>
-                </div>
+                <%@include file="/WEB-INF/jsp/footerPart.jsp"%>
             </div>
         </div>
     </div>

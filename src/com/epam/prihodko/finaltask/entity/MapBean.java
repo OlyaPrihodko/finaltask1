@@ -1,4 +1,4 @@
-package com.epam.prihodko.finaltask.domain;
+package com.epam.prihodko.finaltask.entity;
 
 import java.util.Iterator;
 import java.util.Map;

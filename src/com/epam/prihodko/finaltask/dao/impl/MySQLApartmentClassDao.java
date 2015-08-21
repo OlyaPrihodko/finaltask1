@@ -1,8 +1,9 @@
 package com.epam.prihodko.finaltask.dao.impl;
 
-import com.epam.prihodko.finaltask.controller.Controller;
-import com.epam.prihodko.finaltask.dao.domain.ApartmentClassDao;
-import com.epam.prihodko.finaltask.domain.ApartmentClass;
+import com.epam.prihodko.finaltask.controller.listener.ContextServletListener;
+import com.epam.prihodko.finaltask.dao.DataBaseParameterName;
+import com.epam.prihodko.finaltask.dao.entity.ApartmentClassDao;
+import com.epam.prihodko.finaltask.entity.ApartmentClass;
 import com.epam.prihodko.finaltask.exception.ConnectionPoolException;
 import com.epam.prihodko.finaltask.exception.DaoException;
 
@@ -16,24 +17,24 @@ public class MySQLApartmentClassDao implements ApartmentClassDao {
         ApartmentClass apartmentClass=null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from apartment where id="+id;
+        String str = "select * from apartment_class where id="+id;
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet!=null){
+            while (resultSet.next()){
                 apartmentClass = new ApartmentClass();
-                apartmentClass.setId(resultSet.getInt("id"));
-                apartmentClass.setType(resultSet.getString("type"));
+                apartmentClass.setId(resultSet.getInt(DataBaseParameterName.ID));
+                apartmentClass.setType(resultSet.getString(DataBaseParameterName.TYPE));
             }
 
         }catch (SQLException e){
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLApartmentClassDao has problem with Sql in getById method",e);
         }catch (ConnectionPoolException e) {
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLApartmentClassDao has problem with connection pool in getById method",e);
         }
         finally {
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
 
         return apartmentClass;
@@ -47,20 +48,20 @@ public class MySQLApartmentClassDao implements ApartmentClassDao {
         Connection connection = null;
         String str = "select * from mydb.apartment_class where apartment_class.type='"+apartmentClass.getType()+"'";
         try{
-            connection =  Controller.connectionPool.takeConnection();//.prepareStatement(str);
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-               idApartmentClass=resultSet.getInt("id");
+               idApartmentClass=resultSet.getInt(DataBaseParameterName.ID);
             }
 
         }catch (SQLException e){
-            throw new DaoException("MySQLOrderDao has problem with Sql",e);
+            throw new DaoException("MySQLApartmentClassDao has problem with Sql in findIdByType method",e);
         }catch (ConnectionPoolException e) {
-            throw new DaoException("MySQLOrderDao has problem with connection pool",e);
+            throw new DaoException("MySQLApartmentClassDao has problem with connection pool in findIdByType method",e);
         }
         finally {
-            Controller.connectionPool.closeConnection(connection,preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection,preparedStatement);
         }
         return idApartmentClass;
     }

@@ -9,6 +9,7 @@
 <fmt:message bundle="${loc}" key="locale.message.Logout" var="Logout"/>
 <fmt:message bundle="${loc}" key="locale.message.Message10" var="Message10"/>
 <fmt:message bundle="${loc}" key="locale.message.Message11" var="Message11"/>
+<fmt:message bundle="${loc}" key="locale.message.Apartments" var="Apartments"/>
 <html lang="${language}">
 <head>
     <title>${Message11}</title>
@@ -20,8 +21,8 @@
 </head>
 <body>
 <c:set scope="session" value="/WEB-INF/jsp/login.jsp" var="previous-page"/>
-<jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.domain.MapBean"
-             type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
+<jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.entity.MapBean"
+             type="com.epam.prihodko.finaltask.entity.MapBean" scope="session"/>
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-offset-2 col-lg-8">
@@ -36,16 +37,21 @@
                         <input type="hidden" id="command" name="command" value=""/>
                         <input type="hidden" id="orderId" name="orderId" value=""/>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  col-lg-offset-3">
                                 <div class="btn-group">
                                     <button  type="submit" class="btn btn-labeled btn-danger"
                                              onclick="document.getElementById('command').value='logout';">
                                     <span class="btn-label" ><i class="fa fa-sign-out"></i>
                                     </span> ${Logout}
                                     </button>
+                                    <button  type="submit" class="btn btn-labeled btn-primary"
+                                             onclick="document.getElementById('command').value='go-to-apartmentTable-page';">
+                                    <span class="btn-label" ><i class="fa fa-list"></i>
+                                    </span> ${Apartments}
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+                        </div><br/>
                         <div class="row text-center">
                             <h3>${Message10}</h3>
                         </div>
@@ -56,13 +62,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
-                            <h5 class="text-center">${FinalTask}</h5>
-                        </div>
-                    </div>
-                </div>
+                <%@include file="/WEB-INF/jsp/footerPart.jsp"%>
             </div>
         </div>
     </div>

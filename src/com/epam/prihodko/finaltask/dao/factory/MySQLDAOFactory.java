@@ -1,6 +1,6 @@
 package com.epam.prihodko.finaltask.dao.factory;
 
-import com.epam.prihodko.finaltask.dao.domain.*;
+import com.epam.prihodko.finaltask.dao.entity.*;
 import com.epam.prihodko.finaltask.dao.impl.*;
 
 

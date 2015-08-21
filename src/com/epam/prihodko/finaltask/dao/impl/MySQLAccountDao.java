@@ -1,16 +1,15 @@
 package com.epam.prihodko.finaltask.dao.impl;
 
-import com.epam.prihodko.finaltask.controller.Controller;
-import com.epam.prihodko.finaltask.dao.connection.ConnectionPool;
-import com.epam.prihodko.finaltask.dao.domain.AccountDao;
-import com.epam.prihodko.finaltask.domain.Account;
-import com.epam.prihodko.finaltask.domain.Order;
+import com.epam.prihodko.finaltask.controller.listener.ContextServletListener;
+import com.epam.prihodko.finaltask.dao.DataBaseParameterName;
+import com.epam.prihodko.finaltask.dao.entity.AccountDao;
+import com.epam.prihodko.finaltask.entity.Account;
 import com.epam.prihodko.finaltask.exception.ConnectionPoolException;
 import com.epam.prihodko.finaltask.exception.DaoException;
-
 import java.sql.*;
 
 public class MySQLAccountDao implements AccountDao{
+    private final static String getAccountById = "select * from account where id=";
 
     public Account getById(int id)throws DaoException {
         Account account = null;
@@ -18,27 +17,23 @@ public class MySQLAccountDao implements AccountDao{
         Connection connection = null;
         String str = "select * from account where id="+id;
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet!=null){
+            while (resultSet.next()){
                 account = new Account();
-                account.setId(resultSet.getInt("id"));
-                account.setLogin(resultSet.getString("login"));
-                account.setPassword(resultSet.getString("password"));
+                account.setId(resultSet.getInt(DataBaseParameterName.ID));
+                account.setLogin(resultSet.getString(DataBaseParameterName.LOGIN));
+                account.setPassword(resultSet.getString(DataBaseParameterName.PASSWORD));
             }
 
         }catch (SQLException e){
-            // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql in getById method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool in getById method",e);
         }
         finally {
-
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
         return account;
     }
@@ -47,7 +42,7 @@ public class MySQLAccountDao implements AccountDao{
         Connection connection = null;
         String str = "insert into account (login,password,role) values(?,?,?)";
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             preparedStatement.setString(1,account.getLogin());
             preparedStatement.setString(2,account.getPassword());
@@ -55,16 +50,12 @@ public class MySQLAccountDao implements AccountDao{
             preparedStatement.execute();
 
         }catch (SQLException e){
-            // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql in create method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool in create method",e);
         }
         finally {
-
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
     }
     public void update(Account account)throws DaoException{
@@ -72,9 +63,7 @@ public class MySQLAccountDao implements AccountDao{
         Connection connection = null;
         String str = "update account set login=?, password=? where id=?";
         try{
-            connection =  Controller.connectionPool.takeConnection();
-            //  preparedStatement = connection.prepareStatement(setnames);
-            //  preparedStatement.execute();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             preparedStatement.setInt(3, account.getId());
             preparedStatement.setString(1,account.getLogin());
@@ -82,15 +71,12 @@ public class MySQLAccountDao implements AccountDao{
             preparedStatement.execute();
 
         }catch (SQLException e){
-            // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool",e);
         }
         finally {
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
     }
     public void delete(Account account)throws DaoException{}
@@ -100,23 +86,20 @@ public class MySQLAccountDao implements AccountDao{
         boolean b=false;
         String s="select * from account where login='"+account.getLogin()+"'&& password='"+account.getPassword()+"'";
         try{
-            connection= Controller.connectionPool.takeConnection();
+            connection= ContextServletListener.connectionPool.takeConnection();
             preparedStatement=connection.prepareStatement(s);
             ResultSet resultSet = preparedStatement.executeQuery();
             b=resultSet.next();
             if(b){
-            account.setId(resultSet.getInt("id"));
+            account.setId(resultSet.getInt(DataBaseParameterName.ID));
             }
         }catch (SQLException e){
-           // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql in checkAccount method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool in checkAccount method",e);
         }
         finally {
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection,preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection,preparedStatement);
         }
         return b;
     }
@@ -126,24 +109,20 @@ public class MySQLAccountDao implements AccountDao{
         Connection connection = null;
         String str = "select id from account where login='"+account.getLogin()+"'&& password='"+account.getPassword()+"'";
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
-                 id = resultSet.getInt("id");
+                 id = resultSet.getInt(DataBaseParameterName.ID);
             }
 
         }catch (SQLException e){
-            // e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql in getId method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool in getId method",e);
         }
         finally {
-
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
         return id;
     }
@@ -153,23 +132,20 @@ public class MySQLAccountDao implements AccountDao{
         String role=null;
         String str = "select role from account where id="+account.getId();
         try{
-            connection =  Controller.connectionPool.takeConnection();
+            connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
             ResultSet resultSet = preparedStatement.executeQuery();
            while (resultSet.next()){
-                role = resultSet.getString("role");
+                role = resultSet.getString(DataBaseParameterName.ROLE);
             }
 
         }catch (SQLException e){
-            //e.printStackTrace();
-            throw new DaoException("Problem with Sql",e);
+            throw new DaoException("MySQLAccountDao has problem with Sql in getRole method",e);
         }catch (ConnectionPoolException e) {
-            //e.printStackTrace();
-            throw new DaoException("Problem with connection pool",e);
+            throw new DaoException("MySQLAccountDao has problem with connection pool in getRole method",e);
         }
         finally {
-            //preparedStatement.close();
-            Controller.connectionPool.closeConnection(connection, preparedStatement);
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
         }
         return role;
     }

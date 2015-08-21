@@ -11,6 +11,7 @@
 <fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
 <fmt:message bundle="${loc}" key="locale.message.Message6" var="Message6"/>
 <fmt:message bundle="${loc}" key="locale.message.Message7" var="Message7"/>
+<fmt:message bundle="${loc}" key="locale.message.Message17" var="Message17"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="${language}">
 <head>
@@ -23,13 +24,13 @@
 </head>
 <body>
 <c:set scope="session" value="/WEB-INF/jsp/login.jsp" var="previous-page"/>
-<jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.domain.MapBean"
-             type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
-<jsp:useBean id="mapBeanCheck" beanName="com.epam.prihodko.finaltask.domain.MapBean"
-             type="com.epam.prihodko.finaltask.domain.MapBean" scope="session"/>
+<jsp:useBean id="mapBeanOrder" beanName="com.epam.prihodko.finaltask.entity.MapBean"
+             type="com.epam.prihodko.finaltask.entity.MapBean" scope="session"/>
+<jsp:useBean id="mapBeanCheck" beanName="com.epam.prihodko.finaltask.entity.MapBean"
+             type="com.epam.prihodko.finaltask.entity.MapBean" scope="session"/>
 <div class="container-fluid" >
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-lg-offset-2 col-lg-8">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2 class="panel-title text-center">
@@ -61,15 +62,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row text-center">
-                    <h3>${Message6}</h3>
-                    </div>
+                    <br/>
+                    <div align="center" style="color: red"><c:out value="${mistake}"/></div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-12">
                             <div id="accordion" class="panel-group">
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title"><a href="#collapse-1" data-parent ="#accordion" data-toggle="collapse">Заказы</a></h4>
+                                        <h4 class="panel-title"><a href="#collapse-1" data-parent ="#accordion" data-toggle="collapse">${Message6}</a></h4>
                                     </div>
                                     <div id="collapse-1" class="panel-collapse collapse in">
                                         <div class="panel-body">
@@ -79,27 +79,20 @@
                                 </div>
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title"><a href="#collapse-2" data-parent ="#accordion" data-toggle="collapse">Чеки</a></h4>
+                                        <h4 class="panel-title"><a href="#collapse-2" data-parent ="#accordion" data-toggle="collapse">${Message17}</a></h4>
                                     </div>
-                                    <div id="collapse-2" class="panel-collapse collapse ">
+                                    <div id="collapse-2" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <mytag:maptag map="${mapBeanCheck}" lang="${language}" user="${sessionScope.user}"/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="panel-footer">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
-                        <h5 class="text-center">${FinalTask}</h5>
-                    </div>
-                </div>
-            </div>
+            <%@include file="/WEB-INF/jsp/footerPart.jsp"%>
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
-package com.epam.prihodko.finaltask.dao.domain;
+package com.epam.prihodko.finaltask.dao.entity;
 
 import com.epam.prihodko.finaltask.dao.GenericDao;
-import com.epam.prihodko.finaltask.domain.Apartment;
+import com.epam.prihodko.finaltask.entity.Apartment;
 import com.epam.prihodko.finaltask.exception.DaoException;
 
 import java.util.Map;

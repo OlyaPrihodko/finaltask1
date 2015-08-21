@@ -9,7 +9,7 @@
     <uri>customtags</uri>
     <tag>
         <name>maptag</name>
-        <tag-class>com.epam.prihodko.finaltask.customTags.AllListTag</tag-class>
+        <tag-class>com.epam.prihodko.finaltask.customtag.DomainTableTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>map</name>
@@ -28,17 +28,3 @@
         </attribute>
     </tag>
 </taglib>
-        <!--
-         <tag>
-        <name>settag</name>
-        <tag-class>com.epam.prihodko.finaltask.customTags.AllListTag</tag-class>
-        <body-content>scriptless</body-content>
-        <attribute>
-            <name>size</name>
-            <required>false</required>
-            <rtexprvalue>true</rtexprvalue>
-        </attribute>
-    </tag>
-
-
-        -->
