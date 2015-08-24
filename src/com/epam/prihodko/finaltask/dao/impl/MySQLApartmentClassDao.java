@@ -13,11 +13,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MySQLApartmentClassDao implements ApartmentClassDao {
+    private final static String getApartmentClassById = "select * from apartment_class where id=";
+    private final static String getIdApartmentClassByType = "select * from mydb.apartment_class where apartment_class.type=''";
+
     public ApartmentClass getById(int id)throws DaoException {
         ApartmentClass apartmentClass=null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from apartment_class where id="+id;
+        String str = getApartmentClassById+id;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
@@ -46,10 +49,11 @@ public class MySQLApartmentClassDao implements ApartmentClassDao {
         int idApartmentClass=0;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from mydb.apartment_class where apartment_class.type='"+apartmentClass.getType()+"'";
+        StringBuilder str = new StringBuilder(getIdApartmentClassByType);
+        str.insert(63,apartmentClass.getType());
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(str.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                idApartmentClass=resultSet.getInt(DataBaseParameterName.ID);

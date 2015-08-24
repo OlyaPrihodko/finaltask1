@@ -9,7 +9,7 @@
     <uri>customtags</uri>
     <tag>
         <name>maptag</name>
-        <tag-class>com.epam.prihodko.finaltask.customtag.DomainTableTag</tag-class>
+        <tag-class>com.epam.prihodko.finaltask.customtag.EntityTableTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>map</name>
@@ -24,6 +24,11 @@
         <attribute>
             <name>user</name>
             <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <required>false</required>
             <rtexprvalue>true</rtexprvalue>
         </attribute>
     </tag>

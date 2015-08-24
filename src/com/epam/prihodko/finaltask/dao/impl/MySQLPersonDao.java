@@ -14,11 +14,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MySQLPersonDao implements PersonDao {
+    private final static String getById = "select * from person where id=";
+    private final static String createPerson = "insert into person (name, surname, email, phone, account_id) values(?,?,?,?,?)";
+    private final static String updatePerson = "update person set name=?, surname=?, email=?, phone=? where id=?";
+    private final static String getByAccountId = "select * from person where account_id=";
     public Person getById(int domainId)throws DaoException {
         Person person = null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str="select * from person where id="+domainId;
+        String str=getById + domainId;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
@@ -44,7 +48,7 @@ public class MySQLPersonDao implements PersonDao {
     public void create(Person person)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "insert into person (name, surname, email, phone, account_id) values(?,?,?,?,?)";
+        String str = createPerson;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
@@ -67,11 +71,18 @@ public class MySQLPersonDao implements PersonDao {
     public void update(Person person)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "update person set name='"+person.getName()+"', surname='"+person.getSurname()+"'," +
+        /*String str = "update person set name='"+person.getName()+"', surname='"+person.getSurname()+"'," +
                 " email='"+person.getEmail()+"', phone='"+person.getPhone()+"' where id="+person.getId();
+                */
+        String str = updatePerson;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);
+            preparedStatement.setString(1, person.getName());
+            preparedStatement.setString(2,person.getSurname());
+            preparedStatement.setString(3, person.getEmail());
+            preparedStatement.setString(4,person.getPhone());
+            preparedStatement.setInt(5,person.getId());
             preparedStatement.execute();
 
         }catch (SQLException e){
@@ -88,7 +99,7 @@ public class MySQLPersonDao implements PersonDao {
         Person person = null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str="select * from person where account_id="+domainId;
+        String str=getByAccountId+domainId;
         try{
             connection = ContextServletListener.connectionPool.takeConnection();
             preparedStatement = connection.prepareStatement(str);

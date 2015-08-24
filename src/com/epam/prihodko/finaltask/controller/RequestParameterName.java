@@ -36,7 +36,9 @@ public final class RequestParameterName {
     public static final String APARTMENT_ID = "apartmentId";
     public static final String PERSON_ID = "personId";
     public static final String ORDER = "order";
+    public static final String APARTMENT = "apartment";
+    public static final String PRICE = "price";
     public static final String MISTAKE = "mistake";
-
+    public final static String LOCALE = "com.epam.prihodko.finaltask/localization.locale";
 
 }

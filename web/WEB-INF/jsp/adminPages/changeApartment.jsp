@@ -4,24 +4,23 @@
 <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
 <fmt:setLocale value="${language}"/>
 <fmt:setBundle basename="/com.epam.prihodko.finaltask/localization.locale" var="loc"/>
+<fmt:message bundle="${loc}" key="locale.message.Message23" var="Message23"/>
 <fmt:message bundle="${loc}" key="locale.message.Back" var="Back"/>
+<fmt:message bundle="${loc}" key="locale.message.Update" var="Update"/>
+<fmt:message bundle="${loc}" key="locale.message.Logout" var="Logout"/>
+<fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
 <fmt:message bundle="${loc}" key="locale.message.ApartmentClass1" var="ApartmentClass1"/>
 <fmt:message bundle="${loc}" key="locale.message.ApartmentClass2" var="ApartmentClass2"/>
 <fmt:message bundle="${loc}" key="locale.message.ApartmentClass3" var="ApartmentClass3"/>
+<fmt:message bundle="${loc}" key="locale.message.Price" var="Price"/>
 <fmt:message bundle="${loc}" key="locale.message.ApartmentClass" var="ApartmentClass"/>
 <fmt:message bundle="${loc}" key="locale.message.RoomNumber" var="RoomNumber"/>
 <fmt:message bundle="${loc}" key="locale.message.Couchette" var="Couchette"/>
-<fmt:message bundle="${loc}" key="locale.message.Datein" var="Datein"/>
-<fmt:message bundle="${loc}" key="locale.message.Dateout" var="Dateout"/>
-<fmt:message bundle="${loc}" key="locale.message.FinalTask" var="FinalTask"/>
-<fmt:message bundle="${loc}" key="locale.message.Message12" var="Message12"/>
-<fmt:message bundle="${loc}" key="locale.message.Message21" var="Message21"/>
-<fmt:message bundle="${loc}" key="locale.message.Message21" var="Message20"/>
-<fmt:message bundle="${loc}" key="locale.message.Update" var="Update"/>
-<fmt:message bundle="${loc}" key="locale.message.Logout" var="Logout"/>
+<fmt:message bundle="${loc}" key="locale.message.Message24" var="Message24"/>
+<fmt:message bundle="${loc}" key="locale.message.Message25" var="Message25"/>
 <html lang="${language}">
 <head>
-    <title>${Message12}</title>
+    <title>${Message23}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
@@ -29,29 +28,15 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body onload="funct()">
-
-<script type="text/javascript">
-    <!--
-    function  validate(){
-        f_datein=new Date(document.form.datein.value.toString()).getTime();
-        f_dateout=new Date(document.form.dateout.value.toString()).getTime();
-        f_today=new Date().getTime();
-        if (!(f_today<f_datein&&f_datein<f_dateout)){
-            alert('${Message21}');
-            return false;
-        }
-    }
-    //-->
-</script>
-<c:set scope="session" value="/WEB-INF/jsp/userPages/userPersonalArea.jsp" var="previous-page"/>
-<jsp:useBean id="order" beanName="com.epam.prihodko.finaltask.entity.Order"
-             type="com.epam.prihodko.finaltask.entity.Order" scope="session"/>
+<c:set scope="session" value="/WEB-INF/jsp/adminPages/apartmentTable.jsp" var="previous-page"/>
+<jsp:useBean id="apartment" beanName="com.epam.prihodko.finaltask.entity.Apartment"
+             type="com.epam.prihodko.finaltask.entity.Apartment" scope="session"/>
 <script type="text/javascript">
     <!--
     function  funct(){
-        var apCl= "<jsp:getProperty name="order" property="apartmentClass"/>";
-        var rN = "<jsp:getProperty name="order" property="roomNumber"/>";
-        var coch ="<jsp:getProperty name="order" property="couchette"/>";
+        var apCl= "<jsp:getProperty name="apartment" property="classId"/>";
+        var rN = "<jsp:getProperty name="apartment" property="roomNumber"/>";
+        var coch ="<jsp:getProperty name="apartment" property="couchette"/>";
         if(document.getElementById('a1').value==apCl){
             document.getElementById('a1').selected="selected";
         }
@@ -61,15 +46,15 @@
         if(document.getElementById('a3').value==apCl){
             document.getElementById('a3').selected="selected";
         }
-                if(document.getElementById('r1').value==rN){
-                    document.getElementById('r1').selected="selected";
-                }
-                if(document.getElementById('r2').value==rN){
-                    document.getElementById('r2').selected="selected";
-                }
-                if(document.getElementById('r3').value==rN){
-                    document.getElementById('r3').selected="selected";
-                }
+        if(document.getElementById('r1').value==rN){
+            document.getElementById('r1').selected="selected";
+        }
+        if(document.getElementById('r2').value==rN){
+            document.getElementById('r2').selected="selected";
+        }
+        if(document.getElementById('r3').value==rN){
+            document.getElementById('r3').selected="selected";
+        }
         if(document.getElementById('c1').value==coch){
             document.getElementById('c1').selected="selected";
         }
@@ -82,31 +67,47 @@
     }
     //-->
 </script>
+<script type="text/javascript">
+    <!--
+    function  validate(){
+        f_price=document.form.price.value;
+        if (f_price<=0){
+            alert('${Message24}');
+            return false;
+        }
+        if (f_price>100000){
+            alert('${Message25}');
+            return false;
+        }
+    }
+    //-->
+</script>
+
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-offset-3 col-lg-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h2 class="panel-title text-center">
-                        ${Message12}
+                       ${Message23}
                     </h2>
                 </div>
                 <br/>
                 <div align="center" style="color: red"><c:out value="${mistake}"/></div>
                 <div class="panel-body">
                     <form role="form" action="controller" method="post" name="form"
-                          onsubmit="if(document.getElementById('command').value=='update-order')return validate();">
+                          onsubmit="if(document.getElementById('command').value=='update-apartment')return validate();">
                         <input type="hidden" id="command" name="command" value=""/>
-                        <input type="hidden" id="orderId" name="orderId" value=""/>
+                        <input type="hidden" id="apartmentId" name="apartmentId" value=""/>
                         <div class="row">
                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10 col-lg-offset-1" >
                                 <div class="form-group" style="margin: 1px">
                                     <label for="apartment-class" class="col-xs-5 control-label" style="color: #134aa8">${ApartmentClass}:</label>
                                     <div class="col-xs-7">
                                         <select class="form-control" name="apartment-class" id ="apartment-class" value="" >
-                                            <option id="a1" value="Номер со спальней" onclick="document.getElementById('apartment-class').value='Номер со спальней'">${ApartmentClass1}</option>
-                                            <option id="a2" value="Семейный номер" onclick="document.getElementById('apartment-class').value='Семейный номер'">${ApartmentClass2}</option>
-                                            <option id="a3" value="Номер для молодоженов" onclick="document.getElementById('apartment-class').value='Номер для молодоженов'">${ApartmentClass3}</option>
+                                            <option id="a1" value="1" onclick="document.getElementById('apartment-class').value='1'">${ApartmentClass1}</option>
+                                            <option id="a2" value="2" onclick="document.getElementById('apartment-class').value='2'">${ApartmentClass2}</option>
+                                            <option id="a3" value="3" onclick="document.getElementById('apartment-class').value='3'">${ApartmentClass3}</option>
                                         </select>
                                     </div>
                                     <div class="form-group" style="margin: 1px">
@@ -130,15 +131,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group" style="margin: 1px">
-                                        <label for="datein" class="col-xs-5 control-label" style="color: #134aa8">${Datein}:</label>
+                                        <label for="price" class="col-xs-5 control-label" style="color: #134aa8">${Price}:</label>
                                         <div class="col-xs-7">
-                                            <input class="form-control" id="datein" type="date" name="datein" placeholder="${DateFormat}" value="<jsp:getProperty name="order" property="date_in"/>" required=""/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="margin: 1px">
-                                        <label for="dateout" class="col-xs-5 control-label" style="color: #134aa8">${Dateout}:</label>
-                                        <div class="col-xs-7">
-                                            <input class="form-control" id="dateout" type="date" name="dateout" placeholder="${DateFormat}" value="<jsp:getProperty name="order" property="date_out"/>" required=""/>
+                                            <input class="form-control" id="price" type="number" name="price" value="<jsp:getProperty name="apartment" property="price"/>" required=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -149,9 +144,8 @@
                                 <br/>
                                 <div class="btn-group">
                                     <button  type="submit" class="btn btn-labeled btn-primary"
-                                             onclick="document.getElementById('command').value='update-order';
-                                             document.getElementById('datein').required='required';
-                                             document.getElementById('dateout').required='required';">
+                                             onclick="document.getElementById('command').value='update-apartment';
+                                             document.getElementById('price').required='required';">
                                       <span class="btn-label" ><i class="fa fa-edit"></i>
                                       </span> ${Update}
                                     </button>
@@ -176,45 +170,9 @@
     </div>
 </div>
 
-
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-<%--
-<table class="table table-bordered">
-                                    <tr>
-                                        <td><th>${ApartmentClass}</th></td>
-                                        <td>
-                                            <input class="input-small" type="text" name="apartment-class" value="<jsp:getProperty name="order" property="apartmentClass"/>"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><th>${RoomNumber}</th></td>
-                                        <td>
-                                            <input class="input-small" type="text" name="room-number" value="<jsp:getProperty name="order" property="roomNumber"/>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><th>${Couchette}</th></td>
-                                        <td>
-                                            <input class="input-small" type="text" name="couchette" value="<jsp:getProperty name="order" property="couchette"/>" >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><th>${Datein}</th></td>
-                                        <td>
-                                            <input class="input-small" type="text" name="datein" value="<jsp:getProperty name="order" property="date_in"/>" >
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><th>${Dateout}</th></td>
-                                        <td>
-                                            <input class="input-small" type="text" name="dateout" value="<jsp:getProperty name="order" property="date_out"/>" >
-                                        </td>
-                                    </tr>
-                                </table>
---%>

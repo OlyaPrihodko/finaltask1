@@ -11,6 +11,7 @@ public final class JSPPageName {
     public static final String ADMIN_MAIN_PAGE = "/WEB-INF/jsp/adminPages/adminMainPage.jsp";
     public static final String MAKE_AN_ORDER_PAGE = "/WEB-INF/jsp/userPages/makeAnOrder.jsp";
     public static final String CHANGE_ORDER_PAGE = "/WEB-INF/jsp/userPages/changeOrder.jsp";
+    public static final String CHANGE_APARTMENT_PAGE = "/WEB-INF/jsp/adminPages/changeApartment.jsp";
     public static final String APARTMENT_TABLE_PAGE = "/WEB-INF/jsp/adminPages/apartmentTable.jsp";
     public static final String AVAILABLE_APARTMENT_PAGE = "/WEB-INF/jsp/adminPages/availableApartment.jsp";
 }

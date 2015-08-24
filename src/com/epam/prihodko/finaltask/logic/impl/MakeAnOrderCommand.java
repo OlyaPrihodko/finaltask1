@@ -11,107 +11,78 @@ import com.epam.prihodko.finaltask.exception.DaoException;
 import com.epam.prihodko.finaltask.exception.ProjectException;
 import com.epam.prihodko.finaltask.logic.ICommand;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.Date;
 
 public class MakeAnOrderCommand implements ICommand {
-
-    private final static String LOCALE = "com.epam.prihodko.finaltask/localization.locale";
+    private static DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
+    private static OrderDao orderDao = MySQLDaoFactory.getOrderDao();
+    private final static  SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
     @Override
     public String execute(HttpServletRequest request) throws ProjectException {
-    String page;
-        DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
-        OrderDao orderDao = MySQLDaoFactory.getOrderDao();
+        String page;
         String apartmentClass = request.getParameter(RequestParameterName.APARTMENT_CLASS);
-        int couchette = Integer.parseInt(request.getParameter(RequestParameterName.PARAM_NAME_COUCHETTE));
+        String couch = request.getParameter(RequestParameterName.PARAM_NAME_COUCHETTE);
+        int couchette = Integer.parseInt(couch);
         String datein = request.getParameter(RequestParameterName.DATE_IN);
         String dateout = request.getParameter(RequestParameterName.DATE_OUT);
-        int roomNumber = Integer.parseInt(request.getParameter(RequestParameterName.ROOM_NUMBER));
-        Order order = new Order(apartmentClass,roomNumber,couchette,datein,dateout,RequestParameterName.STATUS_NEW);
-        try{
+        String roomN = request.getParameter(RequestParameterName.ROOM_NUMBER);
+        int roomNumber = Integer.parseInt(roomN);
+        Object ob = request.getSession().getAttribute(RequestParameterName.LANGUAGE);
+        ResourceBundle resourceBundle;
+        if(!(ob instanceof Locale)){
+            String lan = (String)ob;
+            String language = lan.substring(0,2);
+            String country = lan.substring(3,5);
+            Locale locale = new Locale(language,country);
+            resourceBundle = ResourceBundle.getBundle(RequestParameterName.LOCALE,locale);
+        }
+        else{
+            resourceBundle = ResourceBundle.getBundle(RequestParameterName.LOCALE, (Locale) ob);
+        }
+        ArrayList<String> arrayList = new ArrayList<String>();
+        arrayList.add(apartmentClass);
+        arrayList.add(couch);
+        arrayList.add(datein);
+        arrayList.add(dateout);
+        arrayList.add(roomN);
+        /**
+         * Check empty values ↓
+         * */
+        for(String element: arrayList){
+            if(element.equals("")){
+                request.setAttribute(RequestParameterName.MISTAKE, resourceBundle.getString("locale.message.Message20"));
+                return JSPPageName.MAKE_AN_ORDER_PAGE;
+            }
+        }
+        try {
+                Date dateIn = simpleDateFormat.parse(datein);
+                Date dateOut = simpleDateFormat.parse(dateout);
+                Date currentDate = new Date();
+                java.sql.Date dateSqlIn = new java.sql.Date(dateIn.getTime());
+                java.sql.Date dateSqlOut = new java.sql.Date(dateOut.getTime());
+                /**
+                 * Check correct data ↓
+                 * */
+                if(!(dateSqlIn.after(new Date(currentDate.getTime()))&&dateSqlOut.after(dateSqlIn))){
+                    request.setAttribute(RequestParameterName.MISTAKE, resourceBundle.getString("locale.message.Message21"));
+                    return JSPPageName.MAKE_AN_ORDER_PAGE;
+                }
+            Order order = new Order(apartmentClass,roomNumber,couchette,dateSqlIn,dateSqlOut,RequestParameterName.STATUS_NEW);
             Person person = (Person)request.getSession().getAttribute(RequestParameterName.PERSON);
             order.setPersonId(person.getId());
             orderDao.create(order);
             Map<Integer,Order> orderMap = orderDao.getOrderMapByPersonId(person.getId());
-            Iterator<Map.Entry<Integer,Order>> iterator = orderMap.entrySet().iterator();
-            Object ob = request.getSession().getAttribute(RequestParameterName.LANGUAGE);
-            ResourceBundle resourceBundle = null;
-            if(!(ob instanceof Locale)){
-                String lan = (String)ob;
-                String language = lan.substring(0,2);
-                String country = lan.substring(3,5);
-                Locale locale = new Locale(language,country);
-                resourceBundle =ResourceBundle.getBundle(LOCALE,locale);
-            }
-            else{
-                resourceBundle = ResourceBundle.getBundle(LOCALE, (Locale) ob);
-            }
-
-            while(iterator.hasNext()){
-                Map.Entry<Integer,Order> m = iterator.next();
-                Order ord = m.getValue();
-                String apartmentCl = ord.getApartmentClass();
-                String status = ord.getStatus();
-                if (apartmentCl.equals(RequestParameterName.BEDROOM)) {
-                    if (status.equals(RequestParameterName.STATUS_NEW)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass1"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusNew"));
-                            m.setValue(ord);
-                        }
-
-                    } else if (status.equals(RequestParameterName.STATUS_ORDERED)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass1"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusOrdered"));
-                            m.setValue(ord);
-                        }
-
-                    }
-
-                } else if (apartmentCl.equals(RequestParameterName.FAMILYROON)) {
-                    if (status.equals(RequestParameterName.STATUS_NEW)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass2"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusNew"));
-                            m.setValue(ord);
-                        }
-
-                    } else if (status.equals(RequestParameterName.STATUS_ORDERED)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass2"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusOrdered"));
-                            m.setValue(ord);
-                        }
-
-                    }
-
-                } else if (apartmentCl.equals(RequestParameterName.HONEYMOONROOM)) {
-                    if (status.equals(RequestParameterName.STATUS_NEW)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass3"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusNew"));
-                            m.setValue(ord);
-                        }
-
-                    } else if (status.equals(RequestParameterName.STATUS_ORDERED)) {
-                        if (ob.toString().equals("en_EN")) {
-                            ord.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass3"));
-                            ord.setStatus(resourceBundle.getString("locale.message.StatusOrdered"));
-                            m.setValue(ord);
-                        }
-                    }
-
-                }
-            }
             MapBean mapBeanOrder = new MapBean(orderMap);
             request.getSession().setAttribute(RequestParameterName.MAP_BEAN_ORDER,mapBeanOrder);
-            page= JSPPageName.USER_PERSONAL_AREA_PAGE;
+            page = JSPPageName.USER_PERSONAL_AREA_PAGE;
         }
         catch (DaoException e){
             throw new ProjectException("MakeAnOrderCommand has problem with dao",e);
+        }catch (ParseException e) {
+            throw new ProjectException("MakeAnOrderCommand has problem with parse",e);
         }
         return page;
     }

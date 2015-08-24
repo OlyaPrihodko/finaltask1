@@ -15,15 +15,20 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class MySQLApartmentDao implements ApartmentDao{
-
+    private final static String getAppartmentById = "select * from apartment where id=?";
+    private final static String updateAppartment = "update mydb.apartment set price=?, couchette=?, " +
+            "status=?, class_id=?, room_number=? where id=?";
+    private final static String getAllApartments = "select * from apartment";
+    private final static String findApartment = "select * from apartment where price=? and couchette=? and room_number=? and class_id=?";
+    private final static String getApByCouchClassidRoom = "select * from apartment where class_id=? and couchette=? and room_number=?";
     public Apartment getById(int id)throws DaoException{
         Apartment apartment=null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from apartment where id="+id;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(getAppartmentById);
+            preparedStatement.setInt(1,id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 apartment = new Apartment();
@@ -50,16 +55,15 @@ public class MySQLApartmentDao implements ApartmentDao{
     public void update (Apartment apartment)throws DaoException {
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "update mydb.apartment set " +
-                "price="+apartment.getPrice()+" , " +
-                "couchette="+apartment.getCouchette()+" , " +
-                "status='"+apartment.getStatus()+"' , " +
-                "class_id="+apartment.getClassId()+" , "+
-                "room_number="+apartment.getRoomNumber()+
-                " where id="+apartment.getId();
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(updateAppartment);
+            preparedStatement.setInt(1, apartment.getPrice());
+            preparedStatement.setInt(2,apartment.getCouchette());
+            preparedStatement.setString(3, apartment.getStatus());
+            preparedStatement.setInt(4, apartment.getClassId());
+            preparedStatement.setInt(5, apartment.getRoomNumber());
+            preparedStatement.setInt(6, apartment.getId());
             preparedStatement.execute();
 
         }catch (SQLException e){
@@ -72,32 +76,39 @@ public class MySQLApartmentDao implements ApartmentDao{
         }
     }
     public void delete (Apartment apartment)throws DaoException {}
+    public boolean find(Apartment apartment)throws DaoException{
+        boolean result = false;
+        PreparedStatement preparedStatement = null;
+        Connection connection = null;
+        try{
+            connection =  ContextServletListener.connectionPool.takeConnection();
+            preparedStatement = connection.prepareStatement(findApartment);
+            preparedStatement.setInt(1,apartment.getPrice());
+            preparedStatement.setInt(2,apartment.getCouchette());
+            preparedStatement.setInt(3,apartment.getRoomNumber());
+            preparedStatement.setInt(4,apartment.getClassId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            result=resultSet.next();
+        }catch (SQLException e){
+            throw new DaoException("MySQLApartmentDao has problem with Sql in getById mathod",e);
+        }catch (ConnectionPoolException e) {
+            throw new DaoException("MySQLApartmentDao has problem with connection pool in getById mathod",e);
+        }
+        finally {
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
+        }
+        return result;
+    }
     public Map<Integer,Apartment> getSuitableApartmentMap(Apartment apartment)throws DaoException{
         Map<Integer, Apartment> mapApartment = new LinkedHashMap<Integer, Apartment>();
         PreparedStatement preparedStatement = null;
         Connection connection =null;
-        String str = "select * from apartment " +
-                "where class_id="+apartment.getClassId() +
-                " and apartment.couchette="+apartment.getCouchette()+
-                " and apartment.room_number="+apartment.getRoomNumber()+
-                " and apartment.status='"+apartment.getStatus()+"' "+
-                "union select * from apartment "+
-
-                "where couchette="+apartment.getCouchette()+
-                " and apartment.status='"+apartment.getStatus()+"' "+
-                " and apartment.room_number="+apartment.getRoomNumber()+
-                " union select * from apartment "+
-
-                " where couchette="+apartment.getCouchette()+
-                " and apartment.status='"+apartment.getStatus()+"' "+
-                " and apartment.class_id="+apartment.getClassId()+
-                " union select * from apartment "+
-
-                " where couchette="+apartment.getCouchette()+
-                " and apartment.status='"+apartment.getStatus()+"'";
         try{
             connection = ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(getApByCouchClassidRoom);
+            preparedStatement.setInt(1, apartment.getClassId());
+            preparedStatement.setInt(2, apartment.getCouchette());
+            preparedStatement.setInt(3, apartment.getRoomNumber());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt(DataBaseParameterName.ID);
@@ -117,7 +128,40 @@ public class MySQLApartmentDao implements ApartmentDao{
                 mapApartment.put(id, apartment1);
             }
 
+        }catch (SQLException e){
+            throw new DaoException("MySQLApartmentDao has problem with Sql in getSuitableApartmentMap method",e);
+        }catch (ConnectionPoolException e) {
+            throw new DaoException("MySQLApartmentDao has problem with connection pool in getSuitableApartmentMap method",e);
+        } finally {
+            ContextServletListener.connectionPool.closeConnection(connection, preparedStatement);
+        }
+        return mapApartment;
+    }
+    public Map<Integer,Apartment> getAllApartmentMap()throws DaoException{
+        Map<Integer, Apartment> mapApartment = new LinkedHashMap<Integer, Apartment>();
+        PreparedStatement preparedStatement = null;
+        Connection connection =null;
+        try{
+            connection = ContextServletListener.connectionPool.takeConnection();
+            preparedStatement = connection.prepareStatement(getAllApartments);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt(DataBaseParameterName.ID);
+                int price = resultSet.getInt(DataBaseParameterName.PRICE);
+                int couchette = resultSet.getInt(DataBaseParameterName.COUCHETTE);
+                int room_number = resultSet.getInt(DataBaseParameterName.ROOM_NUMBER);
+                String status = resultSet.getString(DataBaseParameterName.STATUS);
+                int class_id = resultSet.getInt(DataBaseParameterName.CLASS_ID);
 
+                Apartment apartment1 = new Apartment();
+                apartment1.setId(id);
+                apartment1.setPrice(price);
+                apartment1.setCouchette(couchette);
+                apartment1.setRoomNumber(room_number);
+                apartment1.setStatus(status);
+                apartment1.setClassId(class_id);
+                mapApartment.put(id, apartment1);
+            }
 
         }catch (SQLException e){
             throw new DaoException("MySQLApartmentDao has problem with Sql in getSuitableApartmentMap method",e);

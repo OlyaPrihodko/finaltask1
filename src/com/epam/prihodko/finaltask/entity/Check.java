@@ -41,7 +41,7 @@ public class Check implements java.io.Serializable{
 
     @Override
     public String toString(){
-        return  "<td>"+this.getId()+"</td>"+
+        return // "<td>"+this.getId()+"</td>"+
                 "<td>"+this.getPrice()+" $"+"</td>"+
                 "<td>"+this.getApatrmentId()+"</td>"+
                 "<td>"+this.getOrderId()+"</td>";

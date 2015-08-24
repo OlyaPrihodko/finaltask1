@@ -64,7 +64,7 @@ public class Apartment implements java.io.Serializable{
     @Override
     public String toString(){
 
-        return  "<td>"+this.getId()+"</td>"+
+        return  //"<td>"+this.getId()+"</td>"+
                 "<td>"+this.getPrice()+"</td>"+
                 "<td>"+this.getRoomNumber()+"</td>"+
                 "<td>"+this.getCouchette()+"</td>"+

@@ -3,8 +3,10 @@ package com.epam.prihodko.finaltask.logic.impl;
 import com.epam.prihodko.finaltask.controller.CommandName;
 import com.epam.prihodko.finaltask.controller.JSPPageName;
 import com.epam.prihodko.finaltask.controller.RequestParameterName;
+import com.epam.prihodko.finaltask.dao.entity.ApartmentDao;
 import com.epam.prihodko.finaltask.dao.entity.OrderDao;
 import com.epam.prihodko.finaltask.dao.factory.DAOFactory;
+import com.epam.prihodko.finaltask.entity.Apartment;
 import com.epam.prihodko.finaltask.entity.MapBean;
 import com.epam.prihodko.finaltask.entity.Order;
 import com.epam.prihodko.finaltask.exception.DaoException;
@@ -14,82 +16,125 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
-
+/**
+ * GoToPageCommand returns the right page and executes the necessary operations if necessary
+ * */
 public class GoToPageCommand implements ICommand{
-private final static String LOCALE = "com.epam.prihodko.finaltask/localization.locale";
-private static DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
-private static OrderDao orderDao = MySQLDaoFactory.getOrderDao();
-        @Override
+    private static DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
+    private static OrderDao orderDao = MySQLDaoFactory.getOrderDao();
+    private static ApartmentDao apartmentDao = MySQLDaoFactory.getApartmentDao();
+    @Override
     public String execute(HttpServletRequest request) throws ProjectException {
         CommandName commandName = CommandName.valueOf(request.getParameter(RequestParameterName.COMMAND_NAME).toUpperCase().replace("-","_"));
         switch (commandName){
-            case GO_TO_REGISTR_PAGE:
-                return JSPPageName.REGISTR_PAGE;
-            case GO_TO_USER_PERSONAL_DATA_PAGE:
-                return JSPPageName.USER_PERSONAL_DATA_PAGE;
-            case GO_TO_MAKE_AN_ORDER_PAGE:
-                return JSPPageName.MAKE_AN_ORDER_PAGE;
-            case GO_TO_APARTMENTTABLE_PAGE:
-                return JSPPageName.APARTMENT_TABLE_PAGE;
-            case GO_TO_CHANGE_ORDER_PAGE:
-                String page;
-                String ord = request.getParameter(RequestParameterName.ORDER_ID);
-                int orderId = Integer.parseInt(ord);
-                try{
-                    Order order = orderDao.getById(orderId);
-                    if(order.getStatus().equals(RequestParameterName.STATUS_ORDERED)){
-                        Object ob = request.getSession().getAttribute(RequestParameterName.LANGUAGE);
-                        ResourceBundle resourceBundle = null;
-                        if(!(ob instanceof Locale)){
-                            String lan = (String)ob;
-                            String language = lan.substring(0,2);
-                            String country = lan.substring(3,5);
-                            Locale locale = new Locale(language,country);
-                            resourceBundle =ResourceBundle.getBundle(LOCALE,locale);
-                        }
-                        else{
-                            resourceBundle = ResourceBundle.getBundle(LOCALE, (Locale) ob);
-                        }
-                        request.setAttribute(RequestParameterName.MISTAKE, resourceBundle.getString("locale.message.Message18"));
-                        page = JSPPageName.USER_PERSONAL_AREA_PAGE;
+        case GO_TO_REGISTR_PAGE:
+            return JSPPageName.REGISTR_PAGE;
+
+        case GO_TO_USER_PERSONAL_DATA_PAGE:
+            return JSPPageName.USER_PERSONAL_DATA_PAGE;
+
+        case GO_TO_MAKE_AN_ORDER_PAGE:
+            return JSPPageName.MAKE_AN_ORDER_PAGE;
+
+        case GO_TO_CHANGE_APARTMENT_PAGE:
+            String apId = request.getParameter(RequestParameterName.APARTMENT_ID);
+            int apartmentId = Integer.parseInt(apId);
+            try{
+                Apartment apartment = apartmentDao.getById(apartmentId);
+                if(apartment.getStatus().equals(RequestParameterName.APARTMENT_STATUS_NOT_AVAILABLE)){
+                    Object obLan = request.getSession().getAttribute(RequestParameterName.LANGUAGE);
+                    ResourceBundle resourceBundle;
+                    if(!(obLan instanceof Locale)){
+                        String lan = (String)obLan;
+                        String language = lan.substring(0,2);
+                        String country = lan.substring(3,5);
+                        Locale locale = new Locale(language,country);
+                        resourceBundle =ResourceBundle.getBundle(RequestParameterName.LOCALE,locale);
                     }
                     else{
-                        page = JSPPageName.CHANGE_ORDER_PAGE;
+                        resourceBundle = ResourceBundle.getBundle(RequestParameterName.LOCALE, (Locale) obLan);
                     }
-                    request.getSession().setAttribute(RequestParameterName.ORDER_ID,orderId);
-                    request.getSession().setAttribute(RequestParameterName.ORDER,order);
-                }catch (DaoException e){
+                    request.setAttribute(RequestParameterName.MISTAKE, resourceBundle.getString("locale.message.Message22"));
+                    return JSPPageName.APARTMENT_TABLE_PAGE;
+                }
+                else{
+                    request.getSession().setAttribute(RequestParameterName.APARTMENT_ID,apartmentId);
+                    request.getSession().setAttribute(RequestParameterName.APARTMENT, apartment);
+                    return JSPPageName.CHANGE_APARTMENT_PAGE;
+                }
+            }catch (DaoException e){
+                throw new ProjectException("GoToPageCommand has problem with dao",e);
+            }
+
+        case GO_TO_APARTMENTTABLE_PAGE:
+            try {
+                Map<Integer,Apartment>mapApartment = apartmentDao.getAllApartmentMap();
+                MapBean mapBeanApartment = new MapBean(mapApartment);
+                request.getSession().setAttribute(RequestParameterName.MAP_BEAN_APARTMENT, mapBeanApartment);
+                } catch (DaoException e) {
                     throw new ProjectException("GoToPageCommand has problem with dao",e);
                 }
-                return page;
-                case PREVIOUS_PAGE:
-                String str = (String)request.getSession().getAttribute(RequestParameterName.PREVIOUS_PAGE);
-                if(str.equals(JSPPageName.LOGIN_PAGE)){
-                    return JSPPageName.LOGIN_PAGE;
-                }
-                if(str.equals(JSPPageName.REGISTR_PAGE)){
-                    return JSPPageName.REGISTR_PAGE;
-                }
-                if(str.equals(JSPPageName.USER_PERSONAL_AREA_PAGE)){
+            return JSPPageName.APARTMENT_TABLE_PAGE;
+
+        case GO_TO_CHANGE_ORDER_PAGE:
+            String ord = request.getParameter(RequestParameterName.ORDER_ID);
+            int orderId = Integer.parseInt(ord);
+            try{
+                Order order = orderDao.getById(orderId);
+                if(order.getStatus().equals(RequestParameterName.STATUS_ORDERED)){
+                    Object obLan = request.getSession().getAttribute(RequestParameterName.LANGUAGE);
+                    ResourceBundle resourceBundle;
+                    if(!(obLan instanceof Locale)){
+                        String lan = (String)obLan;
+                        String language = lan.substring(0,2);
+                        String country = lan.substring(3,5);
+                        Locale locale = new Locale(language,country);
+                        resourceBundle =ResourceBundle.getBundle(RequestParameterName.LOCALE,locale);
+                    }
+                    else{
+                        resourceBundle = ResourceBundle.getBundle(RequestParameterName.LOCALE, (Locale) obLan);
+                    }
+                    request.setAttribute(RequestParameterName.MISTAKE, resourceBundle.getString("locale.message.Message18"));
                     return JSPPageName.USER_PERSONAL_AREA_PAGE;
                 }
-                if(str.equals(JSPPageName.USER_PERSONAL_DATA_PAGE)){
-                    return JSPPageName.USER_PERSONAL_DATA_PAGE;
+                else{
+                    request.getSession().setAttribute(RequestParameterName.ORDER_ID,orderId);
+                    request.getSession().setAttribute(RequestParameterName.ORDER,order);
+                    return JSPPageName.CHANGE_ORDER_PAGE;
                 }
-                if(str.equals(JSPPageName.ADMIN_MAIN_PAGE)){
-                    MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
-                    orderDao = MySQLDaoFactory.getOrderDao();
-                    request.getSession().setAttribute(RequestParameterName.USER,RequestParameterName.ADMIN);
-                    try{
-                        Map<Integer,Order> mapOrder = orderDao.getOrderMapByStatus(RequestParameterName.STATUS_NEW);
-                        MapBean mapBeanOrder = new MapBean(mapOrder);
-                        request.getSession().setAttribute(RequestParameterName.MAP_BEAN_ORDER,mapBeanOrder);
-                    }
-                    catch (DaoException e){
-                        throw new ProjectException("GoToPageCommand has problem with dao",e);
-                    }
-                    return JSPPageName.ADMIN_MAIN_PAGE;
+            }catch (DaoException e){
+                throw new ProjectException("GoToPageCommand has problem with dao",e);
+            }
+
+        case PREVIOUS_PAGE:
+            String str = (String)request.getSession().getAttribute(RequestParameterName.PREVIOUS_PAGE);
+            if(str.equals(JSPPageName.LOGIN_PAGE)){
+                return JSPPageName.LOGIN_PAGE;
+            }
+            if(str.equals(JSPPageName.REGISTR_PAGE)){
+                return JSPPageName.REGISTR_PAGE;
+            }
+            if(str.equals(JSPPageName.USER_PERSONAL_AREA_PAGE)){
+                return JSPPageName.USER_PERSONAL_AREA_PAGE;
+            }
+            if(str.equals(JSPPageName.APARTMENT_TABLE_PAGE)){
+                return JSPPageName.APARTMENT_TABLE_PAGE;
+            }
+            if(str.equals(JSPPageName.USER_PERSONAL_DATA_PAGE)){
+                return JSPPageName.USER_PERSONAL_DATA_PAGE;
+            }
+            if(str.equals(JSPPageName.ADMIN_MAIN_PAGE)){
+                request.getSession().setAttribute(RequestParameterName.USER,RequestParameterName.ADMIN);
+                try{
+                    Map<Integer,Order> mapOrder = orderDao.getOrderMapByStatus(RequestParameterName.STATUS_NEW);
+                    MapBean mapBeanOrder = new MapBean(mapOrder);
+                    request.getSession().setAttribute(RequestParameterName.MAP_BEAN_ORDER,mapBeanOrder);
                 }
+                catch (DaoException e){
+                    throw new ProjectException("GoToPageCommand has problem with dao",e);
+                }
+                return JSPPageName.ADMIN_MAIN_PAGE;
+            }
         }
     return null;
     }

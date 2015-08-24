@@ -1,19 +1,21 @@
 package com.epam.prihodko.finaltask.entity;
 
+import java.sql.Date;
+
 public class Order implements java.io.Serializable{
     private int id=0;
     private String apartmentClass;
     private int couchette;
     private int roomNumber;
-    private String date_in;
-    private String date_out;
+    private Date date_in;
+    private Date date_out;
     private String status;
     private int personId;
 
     public Order(){}
 
 
-    public Order( String apartmentClass,int roomNumber,int couchette, String date_in, String date_out, String status) {
+    public Order( String apartmentClass,int roomNumber,int couchette, Date date_in, Date date_out, String status) {
 
         this.couchette = couchette;
         this.date_in = date_in;
@@ -23,7 +25,7 @@ public class Order implements java.io.Serializable{
         this.status = status;
     }
 
-    public Order(int id, String apartmentClass,int roomNumber,int couchette, String date_in, String date_out, String status) {
+    public Order(int id, String apartmentClass,int roomNumber,int couchette, Date date_in, Date date_out, String status) {
         this.id=id;
         this.couchette = couchette;
         this.date_in = date_in;
@@ -42,10 +44,10 @@ public class Order implements java.io.Serializable{
     public void setRoomNumber(int room_number) {
         this.roomNumber = room_number;
     }
-    public void setDate_in(String date_in) {
+    public void setDate_in(Date date_in) {
         this.date_in = date_in;
     }
-    public void setDate_out(String date_out) {
+    public void setDate_out(Date date_out) {
         this.date_out = date_out;
     }
     public void setApartmentClass(String apartmentClass) {
@@ -67,10 +69,10 @@ public class Order implements java.io.Serializable{
     public int getRoomNumber() {
         return roomNumber;
     }
-    public String getDate_in() {
+    public Date getDate_in() {
         return date_in;
     }
-    public String getDate_out() {
+    public Date getDate_out() {
         return date_out;
     }
     public String getApartmentClass() {
@@ -85,7 +87,7 @@ public class Order implements java.io.Serializable{
 
     @Override
     public String toString(){
-        return  "<td>"+this.getId()+"</td>"+
+        return  //"<td>"+this.getId()+"</td>"+
                 "<td>"+this.getApartmentClass()+"</td>"+
                 "<td>"+this.getRoomNumber()+"</td>"+
                 "<td>"+this.getCouchette()+"</td>"+

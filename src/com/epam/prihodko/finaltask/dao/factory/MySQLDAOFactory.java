@@ -3,7 +3,6 @@ package com.epam.prihodko.finaltask.dao.factory;
 import com.epam.prihodko.finaltask.dao.entity.*;
 import com.epam.prihodko.finaltask.dao.impl.*;
 
-
 public class MySQLDAOFactory extends DAOFactory {
 
     public AccountDao getAccountDao(){

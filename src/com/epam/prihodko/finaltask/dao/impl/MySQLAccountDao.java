@@ -9,16 +9,20 @@ import com.epam.prihodko.finaltask.exception.DaoException;
 import java.sql.*;
 
 public class MySQLAccountDao implements AccountDao{
-    private final static String getAccountById = "select * from account where id=";
+    private final static String getAccountById = "select * from account where id=?";
+    private final static String insertIntoAccountLoginPassRole = "insert into account (login,password,role) values(?,?,?)";
+    private final static String updateAccountSetLoginPassId = "update account set login=?, password=? where id=?";
+    private final static String getAccountByLoginAndPass = "select * from account where login=? and password=?";
+    private final static String getAccountRoleById = "select role from account where id=?";
 
     public Account getById(int id)throws DaoException {
         Account account = null;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select * from account where id="+id;
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(getAccountById);
+            preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 account = new Account();
@@ -40,10 +44,9 @@ public class MySQLAccountDao implements AccountDao{
     public void create (Account account)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "insert into account (login,password,role) values(?,?,?)";
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(insertIntoAccountLoginPassRole);
             preparedStatement.setString(1,account.getLogin());
             preparedStatement.setString(2,account.getPassword());
             preparedStatement.setString(3,account.getRole());
@@ -61,10 +64,9 @@ public class MySQLAccountDao implements AccountDao{
     public void update(Account account)throws DaoException{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "update account set login=?, password=? where id=?";
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(updateAccountSetLoginPassId);
             preparedStatement.setInt(3, account.getId());
             preparedStatement.setString(1,account.getLogin());
             preparedStatement.setString(2, account.getPassword());
@@ -84,14 +86,15 @@ public class MySQLAccountDao implements AccountDao{
         Connection connection = null;
         PreparedStatement preparedStatement= null;
         boolean b=false;
-        String s="select * from account where login='"+account.getLogin()+"'&& password='"+account.getPassword()+"'";
         try{
             connection= ContextServletListener.connectionPool.takeConnection();
-            preparedStatement=connection.prepareStatement(s);
+            preparedStatement=connection.prepareStatement(getAccountByLoginAndPass);
+            preparedStatement.setString(1, account.getLogin());
+            preparedStatement.setString(2, account.getPassword());
             ResultSet resultSet = preparedStatement.executeQuery();
             b=resultSet.next();
             if(b){
-            account.setId(resultSet.getInt(DataBaseParameterName.ID));
+                account.setId(resultSet.getInt(DataBaseParameterName.ID));
             }
         }catch (SQLException e){
             throw new DaoException("MySQLAccountDao has problem with Sql in checkAccount method",e);
@@ -107,15 +110,13 @@ public class MySQLAccountDao implements AccountDao{
         int id=0;
         PreparedStatement preparedStatement = null;
         Connection connection = null;
-        String str = "select id from account where login='"+account.getLogin()+"'&& password='"+account.getPassword()+"'";
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(getAccountByLoginAndPass);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                  id = resultSet.getInt(DataBaseParameterName.ID);
             }
-
         }catch (SQLException e){
             throw new DaoException("MySQLAccountDao has problem with Sql in getId method",e);
         }catch (ConnectionPoolException e) {
@@ -130,10 +131,10 @@ public class MySQLAccountDao implements AccountDao{
         PreparedStatement preparedStatement = null;
         Connection connection = null;
         String role=null;
-        String str = "select role from account where id="+account.getId();
         try{
             connection =  ContextServletListener.connectionPool.takeConnection();
-            preparedStatement = connection.prepareStatement(str);
+            preparedStatement = connection.prepareStatement(getAccountRoleById);
+            preparedStatement.setInt(1,account.getId());
             ResultSet resultSet = preparedStatement.executeQuery();
            while (resultSet.next()){
                 role = resultSet.getString(DataBaseParameterName.ROLE);

@@ -28,23 +28,25 @@
                     </h2>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action="controller" method="post">
-                        <input type="hidden" id="command" name="command" value=""/>
-                        <div class="row text-center">
-                            <h3>${Message2}</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 col-lg-offset-5">
-                                <div class="btn-group">
-                                    <button  type="submit" class="btn btn-labeled btn-primary"
-                                             onclick="document.getElementById('command').value='previous-page';">
-                                          <span class="btn-label" ><i class="fa fa-arrow-left"></i>
-                                          </span> ${Back}
-                                    </button>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 col-lg-offset-2" >
+                        <form role="form" action="controller" method="post">
+                            <input type="hidden" id="command" name="command" value=""/>
+                            <div class="row text-center">
+                                <h3>${Message2}</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5 col-lg-offset-5">
+                                    <div class="btn-group">
+                                        <button  type="submit" class="btn btn-labeled btn-primary"
+                                                 onclick="document.getElementById('command').value='previous-page';">
+                                              <span class="btn-label" ><i class="fa fa-arrow-left"></i>
+                                              </span> ${Back}
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
                 <%@include file="/WEB-INF/jsp/footerPart.jsp"%>
             </div>

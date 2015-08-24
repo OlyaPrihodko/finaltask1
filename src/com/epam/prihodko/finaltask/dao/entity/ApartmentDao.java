@@ -11,5 +11,7 @@ public interface ApartmentDao extends GenericDao<Apartment> {
     public void create(Apartment apartment)throws DaoException;
     public void update(Apartment apartment) throws DaoException;
     public void delete(Apartment apartment)throws DaoException;
+    public boolean find(Apartment apartment)throws DaoException;
     public Map<Integer,Apartment> getSuitableApartmentMap(Apartment apartment)throws DaoException;
+    public Map<Integer,Apartment> getAllApartmentMap()throws DaoException;
 }

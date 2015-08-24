@@ -42,7 +42,7 @@
                     <input type="hidden" id="command" name="command" value=""/>
                     <input type="hidden" id="orderId" name="orderId" value=""/>
                     <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-10  col-lg-offset-2" >
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  col-lg-offset-3" >
                             <div class="btn-group">
                                 <button  type="submit" class="btn btn-labeled btn-primary"
                                          onclick="document.getElementById('command').value='go-to-user-personal-data-page';">
@@ -73,7 +73,7 @@
                                     </div>
                                     <div id="collapse-1" class="panel-collapse collapse in">
                                         <div class="panel-body">
-                                            <mytag:maptag map="${mapBeanOrder}" lang="${language}" user="${sessionScope.user}"/>
+                                            <mytag:maptag map="${mapBeanOrder}" lang="${language}" user="${sessionScope.user}" action=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div id="collapse-2" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            <mytag:maptag map="${mapBeanCheck}" lang="${language}" user="${sessionScope.user}"/>
+                                            <mytag:maptag map="${mapBeanCheck}" lang="${language}" user="${sessionScope.user}" action=""/>
                                         </div>
                                     </div>
                                 </div>

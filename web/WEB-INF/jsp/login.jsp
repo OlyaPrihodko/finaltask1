@@ -1,8 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
-<fmt:setLocale value="${sessionScope.language}"/>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session"/>
+<fmt:setLocale value="${language}"/>
 <fmt:setBundle basename="/com.epam.prihodko.finaltask/localization.locale" var="loc"/>
 <fmt:message bundle="${loc}" key="locale.message.Welcome" var="Welcome"/>
 <fmt:message bundle="${loc}" key="locale.message.Login" var="Login"/>
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-lg-offset-2" >
                                     <form>
-                                        <select class="form-control" id="language" name="language" onchange="submit();">
+                                        <select class="form-control" id="language" name="language" onchange="submit(); "/>">
                                             <option value="en_EN" ${language == 'en_EN' ? 'selected' : ''} >English</option>
                                             <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''} >Русский</option>
                                         </select>

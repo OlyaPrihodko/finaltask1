@@ -10,11 +10,11 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class DomainTableTag extends TagSupport {
-private final static String LOCALE = "com.epam.prihodko.finaltask/localization.locale";
+public class EntityTableTag extends TagSupport {
     private MapBean map;
     private String lang;
     private String user;
+    private String action;
 
     public void setLang(String lang){
             this.lang=lang;
@@ -25,6 +25,9 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
     public void setUser(String user) {
         this.user = user;
     }
+    public void setAction(String action) {
+        this.action = action;
+    }
 
     public String getLang(){return lang;}
     public MapBean getMap(){
@@ -33,25 +36,28 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
     public String getUser() {
         return user;
     }
+    public String getAction() {
+        return action;
+    }
+
     @Override
     public int doStartTag() throws JspTagException {
         String language = getLang().substring(0,2);
         String country = getLang().substring(3,5);
         Locale locale = new Locale(language,country);
-        ResourceBundle resourceBundle = ResourceBundle.getBundle(LOCALE,locale);
+        ResourceBundle resourceBundle = ResourceBundle.getBundle(RequestParameterName.LOCALE,locale);
         int size = new Integer(map.getSize());
         try{
             JspWriter out = pageContext.getOut();
-            Object first = map.getElement();
             if(Integer.parseInt(map.getSize())==0){
                     String noRecords = resourceBundle.getString("locale.message.Message9");
                     out.write("<h4>"+noRecords+"</h4>");
             }
             else {
             out.write("<table class=\"table table-bordered table-striped\">");
-
+            Object first = map.getElement();
             if(first instanceof Order){
-                String id = resourceBundle.getString("locale.message.Id");
+               // String id = resourceBundle.getString("locale.message.Id");
                 String apClass = resourceBundle.getString("locale.message.ApartmentClass");
                 String roomNumber = resourceBundle.getString("locale.message.RoomNumber");
                 String couchette = resourceBundle.getString("locale.message.Couchette");
@@ -59,8 +65,19 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
                 String dateout = resourceBundle.getString("locale.message.Dateout");
                 String status = resourceBundle.getString("locale.message.Status");
                 String action = resourceBundle.getString("locale.message.Action");
-                out.write("<thead class=\"text-center\"><tr>" +
-                        "<th>"+id+"</th>" +
+                if(getAction().equals("no")){
+                    out.write("<thead class=\"text-center\"><tr>" +
+                         //   "<th>"+id+"</th>" +
+                            "<th>"+apClass+"</th>" +
+                            "<th>"+roomNumber+"</th>"+
+                            "<th>"+couchette+"</th>"+
+                            "<th>"+datein+"</th>"+
+                            "<th>"+dateout+"</th>" +
+                            "<th>"+status+"</th>"+
+                            "</tr></thead>");
+                }else{
+                    out.write("<thead class=\"text-center\"><tr>" +
+                       // "<th>"+id+"</th>" +
                         "<th>"+apClass+"</th>" +
                         "<th>"+roomNumber+"</th>"+
                         "<th>"+couchette+"</th>"+
@@ -69,13 +86,35 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
                         "<th>"+status+"</th>"+
                         "<th>"+action+"</th>"+
                         "</tr></thead>");
-
+                }
                 out.write("<tbody>");
                 for(int i=0;i<size;i++){
-                    out.write("<tr>"+map.getElementToString());
+                    Order order;
+                    if(i==0){
+                        order= (Order)first;
+                    }
+                    else{
+                        order = (Order)map.getElement();
+                    }
+                    if(order.getApartmentClass().equals(RequestParameterName.BEDROOM)){
+                        order.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass1"));
+                    }
+                    if(order.getApartmentClass().equals(RequestParameterName.FAMILYROON)){
+                        order.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass2"));
+                    }
+                    if (order.getApartmentClass().equals(RequestParameterName.HONEYMOONROOM)){
+                        order.setApartmentClass(resourceBundle.getString("locale.message.ApartmentClass3"));
+                    }
+                    if(order.getStatus().equals(RequestParameterName.STATUS_NEW)){
+                        order.setStatus(resourceBundle.getString("locale.message.StatusNew"));
+                    }
+                    if (order.getStatus().equals(RequestParameterName.STATUS_ORDERED)){
+                        order.setStatus(resourceBundle.getString("locale.message.StatusOrdered"));
+                    }
+                    //map.updateElement(map.getId(), order);
+                    out.write("<tr>"+order.toString());//map.getElementToString());
                     String addValueToOrderId = " document.getElementById('"+RequestParameterName.ORDER_ID+"').value='"+map.getId()+"'";
-
-                    if(getUser().equals(RequestParameterName.ROLE_USER)){
+                    if(getUser().equals(RequestParameterName.ROLE_USER)&&!getAction().equals("no")){
                         out.write("<td>" +
                                 "<div class=\"btn-group btn-group-vertical\">" +
                                 "<button  type=\"submit\" class=\"btn btn-labeled btn-primary btn-mini\"\n" +
@@ -95,7 +134,7 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
                                 "</td>" +
                                 "</tr>");
                     }
-                    else{   if(getUser().equals(RequestParameterName.ROLE_ADMIN)){
+                    else if(getUser().equals(RequestParameterName.ROLE_ADMIN)&&!getAction().equals("no")){
                             out.write("<td>" +
                                     "<div class=\"btn-group btn-group-vertical\">" +
                                     "<button  type=\"submit\" class=\"btn btn-labeled btn-primary btn-mini\"\n" +
@@ -114,12 +153,12 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
                                     "</div>" +
                                     "</td>" +
                                     "</tr>");
+                        }
                     }
-                    }
-                }
             }
                 if(first instanceof Apartment){
-                    String id = resourceBundle.getString("locale.message.Id");
+
+                    //String id = resourceBundle.getString("locale.message.Id");
                     String price = resourceBundle.getString("locale.message.Price");
                     String couchette = resourceBundle.getString("locale.message.Couchette");
                     String roomNumber = resourceBundle.getString("locale.message.RoomNumber");
@@ -127,8 +166,9 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
                     String apClass = resourceBundle.getString("locale.message.ApartmentClass");
                     String action = resourceBundle.getString("locale.message.Action");
                     String choose = resourceBundle.getString("locale.message.Choose");
+                    String change = resourceBundle.getString("locale.message.Update");
                     out.write("<thead class=\"text-center\"><tr>" +
-                            "<th>"+id+"</th>" +
+                            //"<th>"+id+"</th>" +
                             "<th>"+price+"</th>" +
                             "<th>"+roomNumber+"</th>"+
                             "<th>"+couchette+"</th>"+
@@ -139,41 +179,64 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
 
                     out.write("<tbody>");
                     for(int i=0;i<size;i++){
-                        out.write("<tr>"+map.getElementToString());
+                        Apartment apartment;
+                        if(i==0){
+                            apartment= (Apartment)first;
+                        }
+                        else{
+                            apartment = (Apartment)map.getElement();
+                        }
+                        if(apartment.getStatus().equals(RequestParameterName.APARTMENT_STATUS_AVAILABLE)){
+                            apartment.setStatus(resourceBundle.getString("locale.message.StatusAv"));
+                        }
+                        if(apartment.getStatus().equals(RequestParameterName.APARTMENT_STATUS_NOT_AVAILABLE)){
+                            apartment.setStatus(resourceBundle.getString("locale.message.StatusNotAv"));
+                        }
+                        //map.updateElement(map.getId(), apartment);
+                        out.write("<tr>"+apartment.toString());
                         String addValueToApartmentId = " document.getElementById('"+RequestParameterName.APARTMENT_ID+"').value='"+map.getId()+"'";
+                        if(!getAction().equals("")&&getAction().equals("change")){
+                            out.write("<td>" +
+                                    "<div class=\"btn-group btn-group-vertical\">" +
+                                    "<button  type=\"submit\" class=\"btn btn-labeled btn-primary btn-small\"\n" +
+                                    "onclick=\"document.getElementById('command').value='go-to-change-apartment-page';" +
+                                    addValueToApartmentId+ ";\">\n" +
+                                    "<span class=\"btn-label\" ><i class=\"fa fa-edit\"></i>\n" +
+                                    "</span> "+change+"\n" +
+                                    "</button>");
 
-                        out.write("<td>" +
-                                "<div class=\"btn-group btn-group-vertical\">" +
-                                "<button  type=\"submit\" class=\"btn btn-labeled btn-success btn-small\"\n" +
-                                "onclick=\"document.getElementById('command').value='to-reserve-apartment';" +
-                                addValueToApartmentId+ ";\">\n" +
-                                "<span class=\"btn-label\" ><i class=\"fa fa-check\"></i>\n" +
-                                "</span> "+choose+"\n" +
-                                "</button>"+
-                                "</div>" +
-                                "</td>" +
-                                "</tr>");
-
-                        /*out.write("<button  type=\"submit\" class=\"btn btn-labeled btn-danger btn-mini\"\n" +
-                                "onclick=\"document.getElementById('command').value='remove-order';" +
-                                addValueToOrderId+";\">\n" +
-                                "<span class=\"btn-label\" ><i class=\"glyphicon glyphicon-remove\"></i>\n" +
-                                "</span> \n" +
-                                "</button>" +
-                                "</div>" +
-                                "</td>" +
-                                "</tr>");*/
-
-
+                            out.write("<button  type=\"submit\" class=\"btn btn-labeled btn-danger btn-mini\"\n" +
+                                    "onclick=\"document.getElementById('command').value='remove-apartment';" +
+                                    addValueToApartmentId+";\">\n" +
+                                    "<span class=\"btn-label\" ><i class=\"glyphicon glyphicon-remove\"></i>\n" +
+                                    "</span> " +resourceBundle.getString("locale.message.Remove")+" "+
+                                    "</button>" +
+                                    "</div>" +
+                                    "</td>" +
+                                    "</tr>");
+                        }
+                        else{
+                            out.write("<td>" +
+                                    "<div class=\"btn-group btn-group-vertical\">" +
+                                    "<button  type=\"submit\" class=\"btn btn-labeled btn-success btn-small\"\n" +
+                                    "onclick=\"document.getElementById('command').value='to-reserve-apartment';" +
+                                    addValueToApartmentId+ ";\">\n" +
+                                    "<span class=\"btn-label\" ><i class=\"fa fa-check\"></i>\n" +
+                                    "</span> "+choose+"\n" +
+                                    "</button>"+
+                                    "</div>" +
+                                    "</td>" +
+                                    "</tr>");
+                        }
                     }
                 }
                 if(first instanceof Check){
-                    String id = resourceBundle.getString("locale.message.Id");
+                   // String id = resourceBundle.getString("locale.message.Id");
                     String price = resourceBundle.getString("locale.message.Price");
                     String apartmentId = resourceBundle.getString("locale.message.ApartmentId");
                     String orderId = resourceBundle.getString("locale.message.OrderId");
                     out.write("<thead class=\"text-center\"><tr>" +
-                            "<th>"+id+"</th>" +
+                          //  "<th>"+id+"</th>" +
                             "<th>"+price+"</th>" +
                             "<th>"+apartmentId+"</th>"+
                             "<th>"+orderId+"</th>"+
@@ -181,11 +244,16 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
 
                     out.write("<tbody>");
                     for(int i=0;i<size;i++){
-                        out.write("<tr>"+map.getElementToString()+"</tr>");
+                        Check check;
+                        if(i==0){
+                            check= (Check)first;
+                        }
+                        else{
+                            check = (Check)map.getElement();
+                        }
+                        out.write("<tr>"+check.toString()+"</tr>");
                     }
                 }
-
-
             out.write("</tbody>");
             out.write("</table>");
             }
@@ -195,6 +263,5 @@ private final static String LOCALE = "com.epam.prihodko.finaltask/localization.l
     }
         return SKIP_BODY;
     }
-
 
 }

@@ -12,11 +12,11 @@ import com.epam.prihodko.finaltask.logic.ICommand;
 import javax.servlet.http.HttpServletRequest;
 
 public class UpdatePersonCommand implements ICommand {
+    private static DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
+    private static PersonDao personDao = MySQLDaoFactory.getPersonDao();
     @Override
     public String execute(HttpServletRequest request) throws ProjectException {
-    String page = JSPPageName.USER_PERSONAL_AREA_PAGE;
-        DAOFactory MySQLDaoFactory = DAOFactory.getDAOFactory(DAOFactory.DataSourceName.MYSQL);
-        PersonDao personDao = MySQLDaoFactory.getPersonDao();
+        String page = JSPPageName.USER_PERSONAL_AREA_PAGE;
         Person person = (Person)request.getSession().getAttribute(RequestParameterName.PERSON);
         person.setName(request.getParameter(RequestParameterName.PARAM_NAME_NAME));
         person.setSurname(request.getParameter(RequestParameterName.PARAM_NAME_SURNAME));
@@ -29,5 +29,4 @@ public class UpdatePersonCommand implements ICommand {
         }
     return page;
     }
-
 }
